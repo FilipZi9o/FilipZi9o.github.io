@@ -16,7 +16,7 @@ body {
 .brand h1 {
     margin: 0;
     font-family: 'Open Sans', Arial, sans-serif;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 nav ul {
@@ -49,7 +49,7 @@ nav ul li a:hover::after {
     height: 2px; /* Adjust this value to change the height of the underline */
     background-color: #666; /* Adjust this value to change the color of the underline */
     transition: width 0.3s ease, left 0.3s ease; /* Added transition */
-    transform: translateX(-50%);
+    transform: translateX(-80%);
 }
 
 
