@@ -10,6 +10,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    pading-top: 10px;
 }
 
 .brand h1 {
