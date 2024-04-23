@@ -6,7 +6,7 @@ body {
 
 .container {
     width: 80%;
-    margin: 20px auto 0; /* Added 20px top margin for spacing */
+    margin: 10px auto 0; /* Added 20px top margin for spacing */
     padding-top: 10px; /* Added padding to the top */
     display: flex;
     justify-content: space-between;
@@ -16,7 +16,7 @@ body {
 .brand h1 {
     margin: 0;
     font-family: 'Open Sans', Arial, sans-serif;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 nav ul {
@@ -27,7 +27,7 @@ nav ul {
 nav ul li {
     display: inline;
     margin-right: 20px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 nav ul li a {
