@@ -1,55 +1,75 @@
-body {
-    font-family: 'Open Sans', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+/* Sticky Header - Increased height to 65px */
+#sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px; /* Increased height */
+    background-color: rgba(255, 255, 255, 1); /* Default background color is white */
+    z-index: 9999;
+    transition: top 0.3s ease, background-color 0.3s ease; /* Smooth hiding and background transition */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically center content */
 }
 
+/* Transparent background at the top */
+#sticky-header.transparent {
+    background-color: rgba(255, 255, 255, 0); /* Fully transparent background */
+    box-shadow: none; /* Remove shadow when transparent */
+}
+
+/* Remove margin-top from body since header is stacked on top of the home section */
+body {
+    margin: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+/* Container and branding styles */
 .container {
     width: 80%;
-    margin: 20px auto 0;
-    padding-top: 10px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* Vertically center text */
 }
 
+/* Branding */
 .brand h1 {
+    font-size: 1.5rem;
     margin: 0;
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-weight: 700;
 }
 
+/* Navigation styling */
 nav ul {
     list-style-type: none;
+    margin: 0;
     padding: 0;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin-right: 20px;
-    font-weight: 600;
 }
 
 nav ul li a {
-    color: #333;
     text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    padding: 10px;
     position: relative;
-}
-
-nav ul li a:hover {
-    color: #666;
+    transition: color 0.3s ease;
 }
 
 nav ul li a::after {
     content: '';
     position: absolute;
-    left: 50%;
-    bottom: -3px;
+    left: 0;
+    bottom: 0;
     width: 0;
     height: 2px;
-    background-color: #666;
+    background-color: #333;
     transition: width 0.3s ease, left 0.3s ease;
-    transform: translateX(-50%);
 }
 
 nav ul li a:hover::after {
@@ -57,16 +77,39 @@ nav ul li a:hover::after {
     left: 0;
 }
 
-main {
-    overflow: hidden; /* Ensure proper layout with 100vh */
+nav ul li a:hover {
+    color: #555;
 }
 
+/* Section styles - Placeholder colored blocks */
 section {
-    padding: 50px 0;
-    border-top: 1px solid #ddd; /* Add grey divider between sections */
+    padding: 100px 0;
     text-align: center;
+    border-bottom: 1px solid #ddd;
 }
 
 #home {
-    height: 100vh; /* Make hero section 100% in height */
+    height: 100vh;
+    background-color: #ffcccb; /* Light red */
+    position: relative; /* Relative positioning for stacking */
+    z-index: 1; /* Pushes the section behind the header */
+}
+
+/* Work and About sections */
+#work {
+    height: 100vh;
+    background-color: #add8e6; /* Light blue */
+}
+
+#about {
+    height: 100vh;
+    background-color: #90ee90; /* Light green */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
 }
