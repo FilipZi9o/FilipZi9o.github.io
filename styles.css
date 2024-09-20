@@ -1,4 +1,5 @@
 /* Sticky Header - Increased height to 65px */
+/* Sticky Header - Increased height to 65px */
 #sticky-header {
     position: fixed;
     top: 0;
@@ -23,7 +24,7 @@
 /* Remove margin-top from body since header is stacked on top of the home section */
 body {
     margin: 0;
-    font-family: 'Open Sans', Arial, sans-serif;
+    font-family: 'Archivo', sans-serif;
 }
 
 /* Container and branding styles */
@@ -39,6 +40,7 @@ body {
     font-size: 1.5rem;
     margin: 0;
 }
+
 
 /* Navigation styling */
 nav ul {
@@ -88,17 +90,167 @@ section {
     border-bottom: 1px solid #ddd;
 }
 
+
 #home {
-    height: 100vh;
+    height: 80vh;
     background-color: #ffcccb; /* Light red */
     position: relative; /* Relative positioning for stacking */
     z-index: 1; /* Pushes the section behind the header */
 }
 
+#home h1 {
+    font-size: 2.3rem;
+    text-align: left;
+
+}
+
+.xtr-bg {
+    font-size: 5.5rem;
+}
+
+#home i {
+    font-size: 2.5rem;
+}
+
+.outer-headings {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.inner-headings {
+    border: 0px solid #ffcccb;
+    height: 2.7rem;
+    line-height: 2.7rem;
+    overflow: hidden;
+}
+
+.inner-headings span {
+    position: relative;
+    animation: text-animation 10s ease infinite;
+}
+
+@keyframes text-animation {
+    0%,
+    100% {
+        top: 0;
+    }
+    35% {
+        top: 0;
+    }
+    40% {
+        top: -2.6rem;
+    }
+    70% {
+        top: -2.6rem;
+    }
+    75% {
+        top: -5.2rem;
+    }
+    95% {
+        top: -5.2rem;
+
+}
+
+}
+
+
+
+
 /* Work and About sections */
+
+/* Work Section */
 #work {
-    height: 100vh;
-    background-color: #add8e6; /* Light blue */
+    padding: 0; /* Remove padding */
+    background-color: #f7f7f7;
+    margin: 0;
+    text-align: center;
+}
+
+/* Full-width stacked layout */
+.works-grid {
+    display: block;
+    width: 100%; /* Full width of viewport */
+    margin: 0;
+}
+
+/* Project card styling */
+.card-project {
+    position: relative; /* Make sure the card-project is the reference for absolute children */
+    display: block;
+    width: 100vw; /* Take full viewport width */
+    text-decoration: none;
+    color: inherit;
+    min-height: 50vh;
+    cursor: pointer;
+    margin: 0 0 2px; /* 2px space between cards */
+    overflow: hidden; /* Ensures content doesn't spill out */
+}
+
+/* Background image */
+.card-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bankIDentCover.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    z-index: 1; /* Ensures image is beneath the gradient overlay */
+}
+
+/* Gradient overlay */
+.card-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10% 80%, rgba(36, 84, 255, 1) 30%, rgba(253, 92, 1, 1) 100%);
+    z-index: 2; /* Places the gradient on top of the image */
+    transition: opacity 0.5s ease;
+    opacity: 1; /* Fully opaque initially */
+}
+
+/* Title and subtitle styles */
+.card-title, .card-subtitle {
+    position: relative;
+    z-index: 3; /* Ensures text is above the gradient */
+    color: white;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: text-decoration 0.5s ease;
+}
+
+.card-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* Hover effect: Fade gradient and underline text */
+.card-project:hover .card-gradient {
+    opacity: 0.3; /* Fades gradient to 30% on hover */
+}
+
+.card-project:hover .card-title, 
+.card-project:hover .card-subtitle {
+    text-decoration: underline; /* Underlines text on hover */
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .card-project {
+        padding: 30px 15px;
+    }
 }
 
 #about {
