@@ -102,6 +102,8 @@ section {
 
 }
 
+
+
 .xtr-bg {
     font-size: 5.5rem;
 }
@@ -129,7 +131,7 @@ section {
 
 .inner-headings span {
     position: relative;
-    animation: text-animation 10s ease infinite;
+    animation: text-animation 6s ease infinite;
 }
 
 @keyframes text-animation {
@@ -158,14 +160,39 @@ section {
 
 
 
+#home {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.blur-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 420px; /* 1.6 times the previous size */
+    height: 420px; /* 1.6 times the previous size */
+    background: radial-gradient(circle, rgba(255,0,150,0.6), rgba(0,150,255,0.6));
+    filter: blur(110px); /* Increase the blur to match the size */
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: -1;
+}
+
+
 
 /* Work and About sections */
 
 /* Work Section Styling */
 #work {
     padding: 50px 0;
-    background-color: #f5f5f5; /* Light grey background */
+    background-color: #ffeeed; /* Light grey background */
     text-align: center;
+}
+
+#work h2 {
+    font-size: 2.1rem;
 }
 
 .work-container {
@@ -239,4 +266,101 @@ footer {
     padding: 20px;
     background-color: #333;
     color: white;
+}
+
+
+/* Sticky header mobile view - center brand and add padding */
+@media (max-width: 768px) {
+    #sticky-header {
+        height: 80px; /* Increase the height slightly */
+    }
+
+    #sticky-header .container {
+        flex-direction: column; /* Stack brand and navigation vertically */
+        align-items: center; /* Center brand and navigation */
+    }
+
+    .brand {
+        margin: 10px 0; /* Increased space between brand and navigation */
+        text-align: center; /* Center the brand text */
+    }
+
+    nav ul {
+        justify-content: center; /* Center navigation links */
+        padding-bottom: 15px; /* Add padding below the navigation */
+    }
+}
+
+
+/* Adjusting outer-headings, inner-headings, and text animation for mobile view */
+@media (max-width: 480px) {
+    .outer-headings {
+        font-size: 1.8rem; /* Decrease font size */
+        padding: 0 20px; /* Add padding to left and right */
+    }
+
+    .outer-headings h1 {
+        font-size: 3.5rem; /* Adjust size of the main heading */
+        text-align: left; /* Ensure it aligns well on smaller screens */
+    }
+
+    .inner-headings {
+        height: 2rem; /* Adjust the height to fit the smaller font */
+        line-height: 2rem; /* Match the line height to keep text vertically centered */
+    }
+
+    .inner-headings span {
+        animation: text-animation-mobile 6s ease infinite; /* Use mobile-specific animation */
+    }
+
+    @keyframes text-animation-mobile {
+        0%, 100% {
+            top: 0;
+        }
+        35% {
+            top: 0;
+        }
+        40% {
+            top: -2rem; /* Adjusted for smaller text */
+        }
+        70% {
+            top: -2rem;
+        }
+        75% {
+            top: -4rem; /* Adjusted for smaller text */
+        }
+        95% {
+            top: -4rem;
+        }
+    }
+}
+
+
+/* Blurry surface shimmer effect for mobile view */
+@media (max-width: 768px) {
+    .blur-circle {
+        width: 600px; /* Larger blur size */
+        height: 600px;
+        background: radial-gradient(circle, rgba(255,0,150,0.3), rgba(0,150,255,0.3)); /* Softer gradient for shimmer */
+        filter: blur(150px); /* Stronger blur for the shimmer effect */
+        animation: shimmerMove 10s infinite ease-in-out; /* Slow shimmer movement */
+        opacity: 1; /* Always visible */
+        position: absolute;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Keyframes for shimmer movement */
+    @keyframes shimmerMove {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+        50% {
+            transform: translate(-30%, -30%) rotate(180deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
 }
