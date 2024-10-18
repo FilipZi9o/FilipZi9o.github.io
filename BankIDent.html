@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank-Ident Usability Testing Case Study</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .cover-image {
+            width: 100%;
+            height: 540px;
+            object-fit: cover;
+            display: block;
+        }
+        @media (max-width: 750px) {
+            .cover-image {
+                height: 300px;
+            }
+        }
+        .content-container, .intro-details-container {
+            padding: 0 10vw;
+            text-align: left;
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+            margin-bottom: 2rem;
+        }
+
+        .case-header {
+            text-align: left;
+            padding: 0 10vw 10px;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: 
+        }
+        .content-container h2 {
+            color: rgb(103, 8, 192);
+        }
+
+        class="case-section"  {
+            padding: 2rem 10vw;
+        }
+    
+        .intro-details-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+    
+        .intro-column {
+            flex: 1;
+        }
+    
+        .intro-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+    
+        .intro-column ul {
+            
+            padding-left: 0;
+        }
+        .duration ul {
+            list-style-type: none;
+        }
+        
+        .intro-column ul li {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hypothesis-objectives-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+        }
+        .hypothesis-objectives-table th, .hypothesis-objectives-table td {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            vertical-align: top;
+        }
+        .hypothesis-objectives-table th {
+            background-color: #f4f4f4;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <header id="sticky-header">
+        <div class="container">
+            <div class="brand">
+                <h1>Filip Žigo</h1>
+            </div>
+            <nav>
+                <ul>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#work">Work</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                    </ul>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <img src="images/bankIDentCover.jpg" alt="Bank Ident" class="cover-image">
+    
+    <main>
+        <section id="introduction" class="case-section">
+            <h1 class="case-header">Bank-Ident Usability Testing</h1>
+            <div class="content-container">
+                <h2>Introduction</h2>
+                <p>Bank Ident is an identification method that works as follows: the users prove their identity by performing a single digit cent amount reference transfer through their own bank, logging in to their account through second factor. This, along with SCHUFA check, allows Verimi to verify the user's identity, which is then further confirmed through a digital signature (QES).</p>
+                <p>This is a method that could prove itself to be a strong option along our other ident methods. From the standpoint of the flow itself, the UI and the UX copy, there is still a lot to be done, as can be seen from this list of product requirements / feature requests by our partners, and our own assumptions on what is not optimal with the flow at the moment. That is why a usability test was conducted, to check if our assumptions were right, and as part of the discovery stage, to try to identify the user pain points and problems with the current flow, and possible opportunities that we didn’t consider.</p>
+            </div>
+            
+            <div class="intro-details-container">
+                <div class="intro-column">
+                    <h3>Roles</h3>
+                    <ul>
+                        <li>Moderating onsite usability tests</li>
+                        <li>Analysing usability test results</li>
+                        <li>Presentating the findings</li>
+                        <li>Preparing the Wireframes</li>
+                    </ul>
+                </div>
+                <div class="intro-column">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>Figma</li>
+                        <li>Figjam</li>
+                        <li>Confluence</li>
+                    </ul>
+                </div>
+                <div class="intro-column duration">
+                    <h3>Project Duration</h3>
+                    <ul>
+                        <li>05.22 - 06.22</li>
+                        <li>1 Month</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+
+<section id="test-goal" class="case-section">
+    <div class="content-container">
+        <h2>Test Goal</h2>
+            <p>
+                The goal of this usability test was to gather qualitative data that would help us find ways to improve the UI and overall experience of the Bank Ident
+                flow in order to:   
+            </p>
+            <ul>
+                <li>Decrease the cancel rate and drop-off (the biggest drop-off of 50% is at bank selection screen)</li>
+                <li>Increase partner acceptance to 80% for interested partners</li>
+                <li>Increase the overall conversion rate of this ident method i.e. the probability that the users finish the flow successfully</li>
+              </ul>
+              
+              
+    </div>
+</section>
+
+        <section id="Hypo-obje" class="case-section">
+            <div class="content-container">
+                <h2>Research Hypotheses & Objectives</h2>
+                <div class="hypothesis-objectives">
+                    <table class="hypothesis-objectives-table">
+                        <thead>
+                            <tr>
+                                <th>Hypothesis</th>
+                                <th>Objective</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Hypothesis 1:</strong> We hypothesized that moving the Bank Selection step to the front would decrease user frustration and reduce cancellation rates by 50%.</td>
+                                <td><strong>Objective 1:</strong> Decrease cancellation rate by 50% for users who have started the flow.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hypothesis 2:</strong> Introducing a progress bar would increase the user's sense of control and lead to an improved conversion rate.</td>
+                                <td><strong>Objective 2:</strong> Increase the conversion rate by improving user orientation.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hypothesis 3:</strong> Reducing the number of steps would improve conversion rates.</td>
+                                <td><strong>Objective 3:</strong> Increase conversion rate by simplifying the user flow.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hypothesis 4:</strong> Fixing UI, UX, and copy issues would minimize user drop-off.</td>
+                                <td><strong>Objective 4:</strong> Increase conversion and partner acceptance rates to 80%.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+        </section>
+        
+
+        <section id="findings" class="case-section">
+            <div class="content-container">
+                <h2>Findings & Implementation</h2>
+                <div class="findings-list">
+                    <p>Here are the key findings from the usability test:</p>
+                    <ul>
+                        <li>Four out of five participants preferred to move the Bank Selection step to the beginning of the flow to avoid wasted effort.</li>
+                        <li>Three out of five participants desired a progress bar to better understand how many steps remained in the flow.</li>
+                        <li>Usability issues were found with input fields, especially on smaller screens, resulting in missed error messages.</li>
+                        <li>Navigation buttons were placed too closely, leading to errors during the usability test.</li>
+                        <li>Several users experienced session timeouts, with no clear warnings provided.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusion" class="case-section">
+            <div class="content-container">
+                <h2>Conclusion</h2>
+                <p>The usability test confirmed that several changes could significantly improve the Bank Ident experience. Participants' feedback has highlighted the need for improved UI elements, clearer navigation, and an overall streamlined user experience.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bank-Ident Usability Testing | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

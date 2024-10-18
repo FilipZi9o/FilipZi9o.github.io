@@ -170,10 +170,10 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    width: 420px; /* 1.6 times the previous size */
-    height: 420px; /* 1.6 times the previous size */
+    width: 720px; /* 1.6 times the previous size */
+    height: 720px; /* 1.6 times the previous size */
     background: radial-gradient(circle, rgba(255,0,150,0.6), rgba(0,150,255,0.6));
-    filter: blur(110px); /* Increase the blur to match the size */
+    filter: blur(180px); /* Increase the blur to match the size */
     pointer-events: none;
     transform: translate(-50%, -50%);
     opacity: 0;
