@@ -7,84 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        .cover-image {
-            width: 100%;
-            height: 540px;
-            object-fit: cover;
-            display: block;
-        }
-        @media (max-width: 750px) {
-            .cover-image {
-                height: 300px;
-            }
-        }
-        .content-container, .intro-details-container {
-            padding: 0 10vw;
-            text-align: left;
-            line-height: 1.6;
-            letter-spacing: 0.5px;
-            margin-bottom: 2rem;
-        }
-
-        .case-header {
-            text-align: left;
-            padding: 0 10vw 10px;
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: 
-        }
-        .content-container h2 {
-            color: rgb(103, 8, 192);
-        }
-
-        class="case-section"  {
-            padding: 2rem 10vw;
-        }
-    
-        .intro-details-container {
-            display: flex;
-            justify-content: space-between;
-            gap: 2rem;
-        }
-    
-        .intro-column {
-            flex: 1;
-        }
-    
-        .intro-column h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-    
-        .intro-column ul {
-            
-            padding-left: 0;
-        }
-        .duration ul {
-            list-style-type: none;
-        }
-        
-        .intro-column ul li {
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .hypothesis-objectives-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 2rem;
-        }
-        .hypothesis-objectives-table th, .hypothesis-objectives-table td {
-            border: 1px solid #ddd;
-            padding: 1rem;
-            vertical-align: top;
-        }
-        .hypothesis-objectives-table th {
-            background-color: #f4f4f4;
-            font-weight: 700;
-        }
-    </style>
 </head>
 <body>
     <header id="sticky-header">
@@ -104,15 +26,25 @@
         </div>
     </header>
     
-    <img src="images/bankIDentCover.jpg" alt="Bank Ident" class="cover-image">
+    <img src="images/bankIdentCover.png" alt="Bank Ident" class="cover-image">
     
     <main>
         <section id="introduction" class="case-section">
+            <a href="https://verimi.de/en/about-verimi/" target="_blank"><img src="images/Verimi.png" alt="Verimi Logo" class="logo"></a>
             <h1 class="case-header">Bank-Ident Usability Testing</h1>
             <div class="content-container">
                 <h2>Introduction</h2>
-                <p>Bank Ident is an identification method that works as follows: the users prove their identity by performing a single digit cent amount reference transfer through their own bank, logging in to their account through second factor. This, along with SCHUFA check, allows Verimi to verify the user's identity, which is then further confirmed through a digital signature (QES).</p>
-                <p>This is a method that could prove itself to be a strong option along our other ident methods. From the standpoint of the flow itself, the UI and the UX copy, there is still a lot to be done, as can be seen from this list of product requirements / feature requests by our partners, and our own assumptions on what is not optimal with the flow at the moment. That is why a usability test was conducted, to check if our assumptions were right, and as part of the discovery stage, to try to identify the user pain points and problems with the current flow, and possible opportunities that we didn’t consider.</p>
+                <p>Verimi is a German digital identity platform that provides secure online authentication, identity verification, and payment services for businesses and individuals across various industries.</p>
+                <p><a href="https://verimi.de/en/verimi-bank-ident/" style="color: #005252; font-weight: bold; text-decoration: none;" target="_blank">Bank-Ident</a> is one of the identity verification method that they offer, and at the time the Usability Testing was conducted, it was introduced and deployed only for a very small number of partners, and was still in an early stage.
+                    It showed a lot of potential and several advantages like for example:</p>
+                    <ul>
+                        <li>It is fully automated and requires no need for physical ID documents or agents to carry out the identification</li>
+                        <li>It is MLA-, eIDAS- and  KYC-compliant</li>
+                        <li>It includes a qualified electronic signature (QES), so it can also be used for digitaly signing legal documents</li>
+                        <li>It insures that the IBAN provided really belongs to the customer, and so can protect against fraud in e-commerce</li>
+                    </ul>   
+                <p>Although very practical and convenient in theory, it has proven to be quite the opposite in practice, indicated not only by a long list of product requirements / feature requests by the partners that introduced it, but also just going once throught the flow it was obvious to everyone in the product team that it was too long and there was plenty of room for improvement.</p>
+                <p>Being the product designer in charge of UX research I had a couple of initial meetings with the product owner of this feature, because it was obvious that there was a need for a usability test, to check if our own assumptions about the flow were right, try to identify as many pain points the users might have, and possible opportunities that we didn't consider.  I planned, conducted the usability testing, and finally analysed and presented the findings to relevant stakeholders. </p>
             </div>
             
             <div class="intro-details-container">
@@ -128,6 +60,7 @@
                 <div class="intro-column">
                     <h3>Tools</h3>
                     <ul>
+                        <li>On-site Usability Test Setup</li>
                         <li>Figma</li>
                         <li>Figjam</li>
                         <li>Confluence</li>
@@ -150,8 +83,7 @@
     <div class="content-container">
         <h2>Test Goal</h2>
             <p>
-                The goal of this usability test was to gather qualitative data that would help us find ways to improve the UI and overall experience of the Bank Ident
-                flow in order to:   
+                The goal of this usability test was to gather qualitative data that would help us find ways to improve the UI and overall experience of the Bank-Ident flow in order to:   
             </p>
             <ul>
                 <li>Decrease the cancel rate and drop-off (the biggest drop-off of 50% is at bank selection screen)</li>
@@ -163,51 +95,176 @@
     </div>
 </section>
 
-        <section id="Hypo-obje" class="case-section">
-            <div class="content-container">
-                <h2>Research Hypotheses & Objectives</h2>
-                <div class="hypothesis-objectives">
-                    <table class="hypothesis-objectives-table">
-                        <thead>
-                            <tr>
-                                <th>Hypothesis</th>
-                                <th>Objective</th>
+<section id="test-details" class="case-section"> 
+    <div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+        <div class="text-content" style="flex: 1; padding-right: 20px;">
+            <h2>Usability Test Details</h2>
+            <p>
+                The usability test was carried out at the Verimi headquarters, in a small conference room that was turned into a usability lab.<br>The sessions took place between 04.05.2022 - 12.05.2022 with 5 test participants from a user testing pool that we as a product design team established. Each session lasted around 45 minutes, with one scenario task that the participants had to complete. <br>
+                We recruited participants as varied in terms of age, tech savviness and gender as possible.
+                <br>I moderated the sessions assisted by my product designer colleague, and at 3 sessions the product owner was also present.<br> We decided not to use a Figma prototype for the testing, but have the participants complete their scenario task in the UAT environment, where they could interact with the actual version of this feature. <br>The sessions were not recorded, but the observations and remarks were written on post it notes on the dedicated Figjam board by myself and the assisting person.
+            </p>
+        </div>
+        <div class="image-content" style="flex: 1;">
+            <img src="images/usabilityLab.jpg" alt="Usability Lab" style="width: 100%; height: auto; border-radius: 8px;">
+        </div>
+    </div>
+</section>
+
+<section id="flow" class="case-section">
+    <div class="content-container">
+        <h2>The Flow</h2>
+            <p>
+                Here is the flow with all its screens in their order:   
+            </p>
+            <img src="images/BankIdentFlow.png" alt="Bank Ident" class="illustration" style="width: 100%; height: auto;"> 
+              
+              
+    </div>
+</section>
+
+<section id="Hypo-obje" class="case-section">
+     <div class="content-container">
+        <h2>Research Hypotheses & Objectives</h2>
+            <div class="hypothesis-objectives">
+                <table class="hypothesis-objectives-table">
+                    <thead>
+                        <tr>
+                        <th>Hypothesis</th>
+                        <th>Objective</th>
+                        </tr>
+                    </thead>
+                <tbody>
+                        <tr>
+                        <td><strong>Hypothesis 1:</strong> We hypothesized that moving the Bank Selection step to the front would decrease user frustration and reduce cancellation rates by 50%.</td>
+                            <td><strong>Objective 1:</strong> Decrease cancellation rate by 50% for users who have started the flow.</td>
                             </tr>
-                        </thead>
-                        <tbody>
                             <tr>
-                                <td><strong>Hypothesis 1:</strong> We hypothesized that moving the Bank Selection step to the front would decrease user frustration and reduce cancellation rates by 50%.</td>
-                                <td><strong>Objective 1:</strong> Decrease cancellation rate by 50% for users who have started the flow.</td>
-                            </tr>
+                        <td><strong>Hypothesis 2:</strong> Introducing a progress bar would increase the user's sense of control and lead to an improved conversion rate.</td>
+                        <td><strong>Objective 2:</strong> Increase the conversion rate by improving user orientation.</td>
+                        </tr>
                             <tr>
-                                <td><strong>Hypothesis 2:</strong> Introducing a progress bar would increase the user's sense of control and lead to an improved conversion rate.</td>
-                                <td><strong>Objective 2:</strong> Increase the conversion rate by improving user orientation.</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Hypothesis 3:</strong> Reducing the number of steps would improve conversion rates.</td>
-                                <td><strong>Objective 3:</strong> Increase conversion rate by simplifying the user flow.</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Hypothesis 4:</strong> Fixing UI, UX, and copy issues would minimize user drop-off.</td>
-                                <td><strong>Objective 4:</strong> Increase conversion and partner acceptance rates to 80%.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-            </div>
-        </section>
+                        <td><strong>Hypothesis 3:</strong> Reducing the number of steps would improve conversion rates.</td>
+                        <td><strong>Objective 3:</strong> Increase conversion rate by simplifying the user flow.</td>
+                        </tr>
+                        <tr>
+                        <td><strong>Hypothesis 4:</strong> Fixing UI, UX, and copy issues would minimize user drop-off.</td>
+                        <td><strong>Objective 4:</strong> Increase conversion and partner acceptance rates to 80%.</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+</section>
         
 
         <section id="findings" class="case-section">
+            
             <div class="content-container">
-                <h2>Findings & Implementation</h2>
-                <div class="findings-list">
-                    <p>Here are the key findings from the usability test:</p>
+                <h2>Usability Test Results & Findings</h2>
+            </div>           
+            <div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+                <div class="text-content" style="flex: 1; padding-right: 20px;">
+                    <h3>Usability Test Notes and Observations</h3>
+                    <p>
+                        The observations, participants' quotes and Errors and Usability issues were all gathered on the Figjam board and clustered directly after the session, together with the assisting person and the product owner in those cases where he was present. We would go through the notes that we made and discuss them.   
+                    </p>
+                </div>
+                <div class="image-content" style="flex: 1;">
+                    <img src="images/BankIdentUTboard1.png" alt="Usability Lab" style="width: 100%; height: auto; border-radius: 8px;">
+                </div>
+            </div>
+            <div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+                <div class="image-content" style="flex: 1; padding-right: 20px;">
+                    <img src="images/BankIdentUTboard2.png" alt="Usability Lab" style="width: 100%; height: auto; border-radius: 8px;">
+                </div>
+                <div class="text-content" style="flex: 1;">
+                    <h3>Affinity Map</h3>
+                    <p>
+                        During this discussion sessions, we clustered all the relevant findings into common themes and issues using an Affinity Map. This helped us recognize and group the observations into 5 groups: 
+                    </p>
                     <ul>
-                        <li>Four out of five participants preferred to move the Bank Selection step to the beginning of the flow to avoid wasted effort.</li>
-                        <li>Three out of five participants desired a progress bar to better understand how many steps remained in the flow.</li>
-                        <li>Usability issues were found with input fields, especially on smaller screens, resulting in missed error messages.</li>
-                        <li>Navigation buttons were placed too closely, leading to errors during the usability test.</li>
-                        <li>Several users experienced session timeouts, with no clear warnings provided.</li>
+                        <li>Errors / usability issues</li>
+                        <li>Orientation and feeling of control of the flow process</li>
+                        <li>UX copy and the presented information</li>
+                        <li>Security and trust issues</li>
+                        <li>Inclusiveness</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+                <div class="text-content" style="flex: 1; padding-right: 20px;">
+                    <h3>Rainbow Spreadsheet</h3>
+                    <p>
+                        These observation points now grouped into common themes, were further put into a rainbow spreadsheet as a visual summmary and way to visually recognize patterns and see the severity of the problem or how common an observation is.   
+                    </p>
+                </div>
+                <div class="image-content" style="flex: 1;">
+                    <img src="images/BankIdentUTboard3.png" alt="Usability Lab" style="width: 100%; height: auto; border-radius: 8px;">
+                </div>
+            </div>
+
+            <div class="content-container">
+                <h3>Key Findings Summmary</h3>
+                <div class="findings-list">
+                    <p>Here are the key findings from the usability test, which show that most of our assumptions have been confirmed:</p>
+                    <ul>
+                        <li><h4>Hypothesis 1 <span>&#9989;</span></h4>
+                            <p>4 out of 5 participants had an account with a bank that was not supported by Bank Ident (because they performed the task in test environment
+                                with testbank they could continue with the flow, but in real life they would be unable to proceed on the Bank-selection Screen) and all 5
+                                expressed that they would prefer to have that screen at the begining so they don’t have to go through all the previous steps, invest so much
+                                time and effort into filling in input fields and reading about the steps ahead (Ident-Form & PIS-Intro screens) and then still be unable to finish
+                                the flow.</p></li>
+                        <li><h4>Hypothesis 2 <span>&#9989;</span></h4>
+                            <p>3 out of 5 participants Expressed a wish for some kind of progress indicator or progress bar, to be able to anticipate how many steps are
+                                ahead, to make them feel more comfortable and give them a feeling of control over the process, and make it more transparent. The remaining
+                                2 participants were on one side an extremely tech savvy product manager, that very quickly finished the task, and had some background
+                                knowledge of the process, and therefore didn’t feel the need for a progress bar, and on the other a 60+ retired teacher, that wasn’t interested
+                                in the process, and how many steps it consists off, but her initial trust that she put into the process was insurance enough that she could trust
+                                it, and not worry how many steps it takes.</p></li>
+                        <li><h4>Hypothesis 3 <span>&#10067;</span></h4>
+                            <p>3 out of 5 participants didn’t read the text on the PIS-intro screen, and found the screen to be unnecessary, but the other 2 found it to be
+                                helpful. All the participants found that all the steps of the flow were necessary, and as the result, judging from the qualitative data and the
+                                perception of the test participants, this hypthesis has not been completely confirmed. What the UT showed is that the sense of orientation and
+                                control of the process i.e. knowing how many steps are left and having transparent information on what happens at each step is far more
+                                important for conversion.</p></li>
+                                <li>
+                                    <h4>Hypothesis 4 <span>&#9989;</span></h4>
+                                    <p>A number of usability, UI, and UX issues were identified, including:</p>
+                                    <ol>
+                                        <li>Input Field Usability:
+                                            <ul>
+                                                <li>Date of Birth input field on the Ident-Form screen, and bank selection input on the Bank-Selection screen, were noted as problematic.</li>
+                                                <li>On smaller screens, if users fail to check the title radio button or make an error, the input field may not be visible, causing confusion when the "Next" button doesn’t respond.</li>
+                                            </ul>
+                                        </li>
+                                        <li>Button Placement:
+                                            <ul>
+                                                <li>The "Next" and "Back" buttons are too close and vertically aligned, leading to frequent misclicks. Three out of five participants clicked "Back" instead of "Next."</li>
+                                            </ul>
+                                        </li>
+                                        <li>Session Timeout:
+                                            <ul>
+                                                <li>Sessions timed out for four out of five participants, likely due to lengthy interaction with each screen. Adding a timeout warning or countdown could mitigate this issue.</li>
+                                            </ul>
+                                        </li>
+                                        <li>Confirmation Screen Data Layout:
+                                            <ul>
+                                                <li>Participants found separate screens for personal data on the QES-Confirm-Data screen inconvenient. Three out of five preferred viewing all data on a single screen for easier confirmation.</li>
+                                            </ul>
+                                        </li>
+                                        <li>Download Options on QES-Confirmation Screen:
+                                            <ul>
+                                                <li>Tech-savvy users suggested the document should be automatically saved, preferably emailed rather than downloaded to a local device.</li>
+                                                <li>Less tech-savvy users overlooked the toggle option, finding it irrelevant whether they received the document locally or not.</li>
+                                            </ul>
+                                        </li>
+                                        <li>UX Copy:
+                                            <ul>
+                                                <li>Some screens (e.g., PIS-Intro, QES-Confirm-Data) contained confusing or verbose language, with cryptic information and typographical errors, diminishing clarity.</li>
+                                            </ul>
+                                        </li>
+                                    </ol>
+                                </li>
                     </ul>
                 </div>
             </div>
@@ -225,6 +282,34 @@
         <p>&copy; 2024 Bank-Ident Usability Testing | All Rights Reserved</p>
     </footer>
 
+
+    <script>
+        let lastScrollTop = 0;
+        const header = document.getElementById('sticky-header');
+        
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Change header background based on scroll position
+            if (scrollTop === 0) {
+                // At the top of the page, make the background transparent
+                header.classList.add('transparent');
+            } else {
+                // Scroll down, change to white background
+                header.classList.remove('transparent');
+            }
+
+            // Hide header when scrolling down, show when scrolling up
+            if (scrollTop > lastScrollTop) {
+                // Scroll down: hide the header completely
+                header.style.top = '-100px';
+            } else {
+                // Scroll up: show the header
+                header.style.top = '0';
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

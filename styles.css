@@ -13,6 +13,8 @@
     align-items: center; /* Vertically center content */
 }
 
+
+
 /* Transparent background at the top */
 #sticky-header.transparent {
     background-color: rgba(255, 255, 255, 0); /* Fully transparent background */
@@ -83,7 +85,7 @@ nav ul li a:hover {
 
 /* Section styles - Placeholder colored blocks */
 section {
-    padding: 100px 0;
+    padding: 32px 0;
     text-align: center;
     border-bottom: 1px solid #ddd;
 }
@@ -241,6 +243,12 @@ section {
     color: #666;
 }
 
+.illustration {
+    padding: 24px 0;
+    margin: 0;
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .work-card {
@@ -272,7 +280,7 @@ footer {
 /* Sticky header mobile view - center brand and add padding */
 @media (max-width: 768px) {
     #sticky-header {
-        height: 80px; /* Increase the height slightly */
+        height: 84px; /* Increase the height slightly */
     }
 
     #sticky-header .container {
@@ -283,13 +291,18 @@ footer {
     .brand {
         margin: 10px 0; /* Increased space between brand and navigation */
         text-align: center; /* Center the brand text */
+        padding-top:16px;
     }
 
     nav ul {
         justify-content: center; /* Center navigation links */
         padding-bottom: 15px; /* Add padding below the navigation */
     }
+    
 }
+
+
+
 
 
 /* Adjusting outer-headings, inner-headings, and text animation for mobile view */
@@ -364,3 +377,107 @@ footer {
         }
     }
 }
+
+.logo {
+
+    height: 28px; /* Set the height to 28px */
+    width: auto;  /* Width will adjust automatically based on the aspect ratio */
+    display: block;  /* Ensures the image behaves as a block element */
+    margin-left: 0;
+    padding: 10px 10vw 10px;
+}
+
+/* Case study styling */
+
+.cover-image {
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    display: block;
+}
+@media (max-width: 750px) {
+    .cover-image {
+        height: 300px;
+    }
+}
+.content-container, .intro-details-container {
+    padding: 0 10vw;
+    text-align: left;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
+}
+
+.case-header {
+    text-align: left;
+    padding: 0 10vw 10px;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: 
+}
+.content-container h2 {
+    color: rgb(103, 8, 192);
+}
+
+
+
+.intro-details-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.intro-column {
+    flex: 1;
+}
+
+.intro-column h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.intro-column ul {
+    
+    padding-left: 0;
+}
+.duration ul {
+    list-style-type: none;
+}
+
+.intro-column ul li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.hypothesis-objectives-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+.hypothesis-objectives-table th, .hypothesis-objectives-table td {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    vertical-align: top;
+}
+.hypothesis-objectives-table th {
+    background-color: #f4f4f4;
+    font-weight: 700;
+}
+
+.case-section {
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .flex-container {
+      flex-direction: column;
+    }
+    
+    .text-content {
+      padding-right: 0;
+    }
+
+    .image-content {
+      margin-top: 20px; /* Add some spacing between text and image */
+    }
+  }
