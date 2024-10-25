@@ -7,6 +7,27 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        // Hash function to securely verify password input
+        async function hashPassword(password) {
+            const msgUint8 = new TextEncoder().encode(password); // Encode as UTF-8
+            const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8); // Hash the password
+            const hashArray = Array.from(new Uint8Array(hashBuffer)); // Convert buffer to byte array
+            return hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // Convert bytes to hex string
+        }
+    
+        // Secure password check using hashed password
+        (async () => {
+            const correctHash = "7ac509b68034d82ad344dc39c397ccc71bda7706efcb21eb76571eb01f4a8fdb"; // Hashed version of "mypassword"
+            const userPassword = prompt("Please enter the password to access this page:");
+            const userHash = await hashPassword(userPassword);
+            
+            if (userHash !== correctHash) {
+                alert("Incorrect password. Redirecting to the homepage.");
+                window.location.href = "index.html"; // Redirect to home page if password is incorrect
+            }
+        })();
+    </script>
 </head>
 <body>
     <header id="sticky-header">
