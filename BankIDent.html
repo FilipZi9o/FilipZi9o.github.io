@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- 
+
     <script>
         // Hash function to securely verify password input
         async function hashPassword(password) {
@@ -28,6 +31,9 @@
             }
         })();
     </script>
+
+-->
+
 </head>
 <body>
     <header id="sticky-header">
@@ -229,27 +235,27 @@
                 <div class="findings-list">
                     <p>Here are the key findings from the usability test, which show that most of our assumptions have been confirmed:</p>
                     <ul>
-                        <li><h4>Hypothesis 1 <span>&#9989;</span></h4>
+                        <li><h4><span class="tooltip" data-tooltip="Moving the Bank Selection step to the front of the user flow would decrease user frustration and reduce cancellation rate by 50%.">Hypothesis 1</span> <span>&#9989;</span></h4>
                             <p>4 out of 5 participants had an account with a bank that was not supported by Bank Ident (because they performed the task in test environment
                                 with testbank they could continue with the flow, but in real life they would be unable to proceed on the Bank-selection Screen) and all 5
                                 expressed that they would prefer to have that screen at the begining so they don’t have to go through all the previous steps, invest so much
                                 time and effort into filling in input fields and reading about the steps ahead (Ident-Form & PIS-Intro screens) and then still be unable to finish
                                 the flow.</p></li>
-                        <li><h4>Hypothesis 2 <span>&#9989;</span></h4>
+                        <li><h4><span class="tooltip" data-tooltip="Introducing a progress bar would increase the user's sense of control and lead to an improved conversion rate.">Hypothesis 2</span> <span>&#9989;</span></h4>
                             <p>3 out of 5 participants Expressed a wish for some kind of progress indicator or progress bar, to be able to anticipate how many steps are
                                 ahead, to make them feel more comfortable and give them a feeling of control over the process, and make it more transparent. The remaining
                                 2 participants were on one side an extremely tech savvy product manager, that very quickly finished the task, and had some background
                                 knowledge of the process, and therefore didn’t feel the need for a progress bar, and on the other a 60+ retired teacher, that wasn’t interested
                                 in the process, and how many steps it consists off, but her initial trust that she put into the process was insurance enough that she could trust
                                 it, and not worry how many steps it takes.</p></li>
-                        <li><h4>Hypothesis 3 <span>&#10067;</span></h4>
+                        <li><h4><span class="tooltip" data-tooltip="Reducing the number of steps would improve conversion rates.">Hypothesis 3</span><span>&#10067;</span></h4>
                             <p>3 out of 5 participants didn’t read the text on the PIS-intro screen, and found the screen to be unnecessary, but the other 2 found it to be
                                 helpful. All the participants found that all the steps of the flow were necessary, and as the result, judging from the qualitative data and the
                                 perception of the test participants, this hypthesis has not been completely confirmed. What the UT showed is that the sense of orientation and
                                 control of the process i.e. knowing how many steps are left and having transparent information on what happens at each step is far more
                                 important for conversion.</p></li>
                                 <li>
-                                    <h4>Hypothesis 4 <span>&#9989;</span></h4>
+                                    <h4><span class="tooltip" data-tooltip="Fixing UI, UX, and copy issues would minimize user drop-off.">Hypothesis 4</span> <span>&#9989;</span></h4>
                                     <p>A number of usability, UI, and UX issues were identified, including:</p>
                                     <ol>
                                         <li>Input Field Usability:

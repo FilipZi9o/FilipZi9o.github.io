@@ -68,3 +68,34 @@ if (isMobileDevice()) {
         blurCircle.style.opacity = 1;
     });
 }
+
+
+
+// Select all tooltip elements
+const tooltips = document.querySelectorAll('.tooltip');
+
+// Function to toggle tooltip visibility on tap
+function toggleTooltip(event) {
+    // Prevent tooltip from closing immediately if tapped again
+    event.stopPropagation();
+    
+    // Hide any open tooltips first
+    tooltips.forEach((tooltip) => {
+        tooltip.classList.remove('active');
+    });
+
+    // Toggle the tapped tooltip
+    event.currentTarget.classList.add('active');
+}
+
+// Close tooltip if tapping elsewhere
+document.addEventListener('click', () => {
+    tooltips.forEach((tooltip) => {
+        tooltip.classList.remove('active');
+    });
+});
+
+// Add tap event to each tooltip
+tooltips.forEach((tooltip) => {
+    tooltip.addEventListener('click', toggleTooltip);
+});
