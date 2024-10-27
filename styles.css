@@ -310,7 +310,7 @@ footer {
 @media (max-width: 480px) {
     .outer-headings {
         font-size: 1.8rem; /* Decrease font size */
-        padding: 22% 20px; /* Add padding to left and right */
+        padding: 22% 20px 0; /* Add padding to left and right */
     }
 
     .outer-headings h1 {
