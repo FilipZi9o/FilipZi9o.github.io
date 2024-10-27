@@ -310,7 +310,7 @@ footer {
 @media (max-width: 480px) {
     .outer-headings {
         font-size: 1.8rem; /* Decrease font size */
-        padding: 28% 20px; /* Add padding to left and right */
+        padding: 22% 20px; /* Add padding to left and right */
     }
 
     .outer-headings h1 {
@@ -319,7 +319,7 @@ footer {
     }
 
     .inner-headings {
-        height: 2.12rem; /* Adjust the height to fit the smaller font */
+        height: 2.08rem; /* Adjust the height to fit the smaller font */
         line-height: 2rem; /* Match the line height to keep text vertically centered */
     }
 
