@@ -99,3 +99,19 @@ document.addEventListener('click', () => {
 tooltips.forEach((tooltip) => {
     tooltip.addEventListener('click', toggleTooltip);
 });
+
+const gradientText = document.querySelectorAll('.ds-text-gradient');
+
+// Event listener to update gradient based on cursor position
+document.addEventListener('mousemove', (e) => {
+    // Calculate angle based on mouse position
+    const angle = Math.atan2(e.clientY - window.innerHeight / 2, e.clientX - window.innerWidth / 2) * (180 / Math.PI) + 180;
+
+    // Update gradient angle for each gradient text element
+    gradientText.forEach(el => {
+        el.style.background = `linear-gradient(${angle}deg, #4a2eec, #be29ec)`;
+        el.style.backgroundClip = "text";          // Ensure text clipping
+        el.style.webkitBackgroundClip = "text";    // Ensure text clipping for WebKit browsers
+        el.style.webkitTextFillColor = "transparent"; // Make the text transparent to show the gradient
+    });
+});
