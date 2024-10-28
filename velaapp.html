@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vela App Case Study</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <!-- 
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vela App Case Study</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/scrollreveal"></script>
+<style>
+        /* Container for the image and overlays */
+        .image-map-container {
+          position: relative;
+          max-width: 100%; /* Image scales responsively */
+          margin: 0 auto;
+        }
+        /* Full-width image */
+        .image-map {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+        /* Overlay links */
+        .overlay {
+          position: absolute;
+          display: block;
+          height:50% !important;
+          background: rgba(255, 255, 255, 0); /* Invisible overlay */
+          transition: background 0.2s ease;
+          cursor: pointer;
+        }
+        .overlay:hover {
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+}
+        /* Positioning overlays over each circle */
+        .overlay-understand { top: 20%; left:0.5%; width: 12%; height: 20%; }
+        .overlay-observe { top: 20%; left: 15%; width: 12%; height: 20%; }
+        .overlay-pov { top: 20%; left: 29.5%; width: 12%; height: 20%; }
+        .overlay-ideate { top: 20%; left: 44%; width: 12%; height: 20%; }
+        .overlay-prototype { top: 20%; left: 58.5%; width: 12%; height: 20%; }
+        .overlay-test { top: 20%; left: 73%; width: 12%; height: 20%; }
+        .overlay-refine { top: 20%; left: 87.5%; width: 12%; height: 20%; }
+      </style>
+<!-- 
 
     <script>
         // Hash function to securely verify password input
@@ -33,421 +67,584 @@
     </script>
 
 -->
-
 </head>
 <body>
-    <header id="sticky-header">
-        <div class="container">
-            <div class="brand">
-                <h1>Filip Žigo</h1>
-            </div>
-            <nav>
-                <ul>
-                    <ul>
-                        <li><a href="index.html#home">Home</a></li>
-                        <li><a href="index.html#work">Work</a></li>
-                        <li><a href="index.html#about">About</a></li>
-                    </ul>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    
-    <img src="images/velaAppCover.jpg" alt="Vela App" class="cover-image">
-    
-    <main>
-        <section id="introduction" class="case-section">
-            <h1 class="case-header">Vela App Case Study</h1>
-            <div class="content-container">
-                <h2>Introduction</h2>
-            </div>
-            
-            <div class="intro-details-container">
-                <div class="intro-column">
-                    <h3>Client</h3>
-                    <ul>
-                        <li><a href="https://xd.adobe.com/view/576a2b1c-7a0a-4460-8cd2-c837f6df6f31-0239/" style="color: #10284A; font-weight: bold; text-decoration: none;" target="_blank">CareerFoundry</a></li>
-                    </ul>
-                </div>
-                <div class="intro-column">
-                    <h3>Tools</h3>
-                    <ul>
-                        <li>Hand-drawn sketching</li>
-                        <li>Adobe Illustrator</li>
-                        <li>Adobe Photoshop</li>
-                        <li>Adobe XD</li>
-                        <li>OptimalSort</li>
-                        <li>UsabilityHub</li>
-                    </ul>
-                </div>
-                <div class="intro-column duration">
-                    <h3>Project Duration</h3>
-                    <ul>
-                        <li>November 20 - March 21</li>
-                        <li>4 Months</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="intro-details-container">
-                <div class="intro-column">
-                    <h3>My Roles:</h3>
-                    <ul>
-                        <li>UX / UI Designer</li>
-                        <li>UX Researcher</li>
-                        <li>Visual Designer</li>
-                    </ul>
-                </div>
-                <div class="intro-column">
-                    <h3>Methods & Processes</h3>
-                    <ul>
-                        <li>Competitor Analysis and SWOT Analysis</li>
-                        <li>Business Requirements</li>
-                        <li>User Interview</li>
-                        <li>Card Sorting and Affinity Mapping</li>
-                        <li>User Personas</li>
-                        <li>User Stories</li>
-                        <li>Information Architecture
+<header id="sticky-header">
+<div class="container">
+<div class="brand">
+<h1 class="fade-in">Filip Žigo</h1>
+</div>
+<nav>
+<ul>
+<ul>
+<li><a href="index.html#home">Home</a></li>
+<li><a href="index.html#work">Work</a></li>
+<li><a href="index.html#about">About</a></li>
+</ul>
+</ul>
+</nav>
+</div>
+</header>
+<img alt="Vela App" class="cover-image fade-in" src="images/velaAppCover.jpg"/>
+<main>
+<section class="case-section" id="introduction">
+<h1 class="case-header fade-in">Vela App Case Study</h1>
+<div class="content-container">
+<h2 class="fade-in">Introduction</h2>
+</div>
+<div class="intro-details-container">
+<div class="intro-column">
+<h3 class="fade-in">Client</h3>
+<ul>
+<li class="fade-in"><a href="https://xd.adobe.com/view/576a2b1c-7a0a-4460-8cd2-c837f6df6f31-0239/" style="color: #10284A; font-weight: bold; text-decoration: none;" target="_blank">CareerFoundry</a></li>
+</ul>
+</div>
+<div class="intro-column">
+<h3 class="fade-in">Tools</h3>
+<ul class="fade-in">
+<li>Hand-drawn sketching</li>
+<li>Adobe Illustrator</li>
+<li>Adobe Photoshop</li>
+<li>Adobe XD</li>
+<li>OptimalSort</li>
+<li>UsabilityHub</li>
+</ul>
+</div>
+<div class="intro-column duration">
+<h3 class="fade-in">Project Duration</h3>
+<ul class="fade-in">
+<li>November 20 - March 21</li>
+<li>4 Months</li>
+</ul>
+</div>
+</div>
+<div class="intro-details-container">
+<div class="intro-column">
+<h3 class="fade-in">My Roles:</h3>
+<ul class="fade-in">
+<li>UX / UI Designer</li>
+<li>UX Researcher</li>
+<li>Visual Designer</li>
+</ul>
+</div>
+<div class="intro-column">
+<h3 class="fade-in">Methods &amp; Processes</h3>
+<ul class="fade-in">
+<li>Competitor Analysis and SWOT Analysis</li>
+<li>Business Requirements</li>
+<li>User Interview</li>
+<li>Card Sorting and Affinity Mapping</li>
+<li>User Personas</li>
+<li>User Stories</li>
+<li>Information Architecture
                             ( Sitemap and Task Flows )</li>
-                        <li>Wireframing and Prototyping from Low to High Fidelity</li>
-                        <li>Usability Testing</li>
-                        <li>Preference Testing</li>
-                        <li>Design Styleguide & Design System</li>
-                        <li>Final Visual Design of the Screens</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="content-container">
-                <h3>Objective</h3>
-                    <p>
+<li>Wireframing and Prototyping from Low to High Fidelity</li>
+<li>Usability Testing</li>
+<li>Preference Testing</li>
+<li>Design Styleguide &amp; Design System</li>
+<li>Final Visual Design of the Screens</li>
+</ul>
+</div>
+</div>
+<div class="content-container">
+<h3 class="fade-in">Objective</h3>
+<p class="fade-in">
                         The initial objective was to provide beautifully displayed and easy-to-understand wind, wave, weather, and algae reports, forecasts, and statistics for sailors, surfers, divers, and any other water sports aficionados. During the initial stages of the project, I decided to concentrate on the surfers only, to allow for a quicker and more effective design process.   
                     </p>
-            </div>
-            <div class="content-container">
-                <h3>Challenges</h3>
-                    <p>The main challenges of this project were:   
+</div>
+<div class="content-container">
+<h3 class="fade-in">Challenges</h3>
+<p class="fade-in">The main challenges of this project were:   
                     </p>
-                    <ul>
-                        <li>Enable users to get <strong>the right information at the right time.</strong></li>
-                        <li>Present <strong>complex information</strong> intuitively and cleanly.</li>
-                        <li>Make the key features o the app <strong>as relevant as possible for surfers.</strong></li>
-                        <li><strong>Interconnect key features</strong> in the best way possible, from a navigational and logical point of view.</li>
-                        <li>Not fall victim to <strong>feature creep</strong> and try to squeeze in too many features (especially because I was a one-man team and had tight deadlines).</li>
-                      </ul>
-            </div>
-            <div class="content-container">
-                <h3>The Process</h3>
-                <img src="images/VelaTheProcess.jpg" alt="Bank Ident" class="illustration" style="width: 100%; height: auto;">
-                    <p>This project was structured around the Design Thinking process and backed up by the User-Centered Design process. True to their iterative nature I went back and forth through the steps, making sure all the design decisions were based on research and analysis.   
+<ul class="fade-in">
+<li>Enable users to get <strong>the right information at the right time.</strong></li>
+<li>Present <strong>complex information</strong> intuitively and cleanly.</li>
+<li>Make the key features o the app <strong>as relevant as possible for surfers.</strong></li>
+<li><strong>Interconnect key features</strong> in the best way possible, from a navigational and logical point of view.</li>
+<li>Not fall victim to <strong>feature creep</strong> and try to squeeze in too many features (especially because I was a one-man team and had tight deadlines).</li>
+</ul>
+</div>
+<div class="content-container">
+<h3 class="fade-in">The Process</h3>
+<div class="image-map-container">
+<img alt="Bank Ident" class="illustration image-map fade-in" src="images/VelaTheProcess.jpg" style="width: 100%; height: auto;"/>
+<!-- Overlays for each phase -->
+<a aria-label="Understand" class="overlay overlay-understand" href="#understand"></a>
+<a aria-label="Observe" class="overlay overlay-observe" href="#observe"></a>
+<a aria-label="POV" class="overlay overlay-pov" href="#POV"></a>
+<a aria-label="Ideate" class="overlay overlay-ideate" href="#ideate"></a>
+<a aria-label="Prototype" class="overlay overlay-prototype" href="#prototype"></a>
+<a aria-label="Test" class="overlay overlay-test" href="#test"></a>
+<a aria-label="Refine" class="overlay overlay-refine" href="#refining the design"></a>
+</div>
+<p class="fade-in">This project was structured around the Design Thinking process and backed up by the User-Centered Design process. True to their iterative nature I went back and forth through the steps, making sure all the design decisions were based on research and analysis.   
                     </p>
-            </div>
-
-            
-        </section>
-    </main>
-    
-
-
-<section id="understand" class="case-section">
-    <div class="content-container">
-        <h2 style="color: rgb(189, 10, 10);">1. Understand</h2>
-    </div>
-
-    <div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
-        <div class="text-content" style="flex: 1; padding-right: 20px;">
-            <h3>Problem Statement and Solution</h3>
-            <p>
+</div>
+</section>
+</main>
+<section class="case-section" id="understand">
+<div class="content-container">
+<h2 class="fade-in" style="color: rgb(189, 10, 10);">1. Understand</h2>
+</div>
+<div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+<div class="text-content fade-in" style="flex: 1; padding-right: 20px;">
+<h3 class="fade-in">Problem Statement and Solution</h3>
+<p class="fade-in">
                 The first step was to define the problem to find a solution for it, and I came up with a problem statement:   
             </p>
-            <p style="font-style: italic; font-family: Georgia, serif; background-color: #f0f0f0; padding: 5px; border-radius: 4px;">
+<p class="fade-in" style="font-style: italic; font-family: Georgia, serif; background-color: #f0f0f0; padding: 5px; border-radius: 4px;">
                 Surfer users <strong>need a way</strong>  to check meteorological information in real-time and to be able to quickly and accurately assess complex weather conditions.   
             </p>
-            <p>
+<p class="fade-in">
             The identified <strong>solution</strong> is designing a weather report app that:   
             </p>
-            <ul>
-                <li>Is visually appealing and contains a well-organized User Interface.</li>
-                <li>Makes checking the meteorological conditions a quick, effective, and delightful experience.</li>
-                <li>Decreases the possibility of incorrectly interpreting the data on weather conditions, or being prone to not checking them, because of it being complicated and unintuitive.</li>
-              </ul>
-
-        </div>
-        <div class="image-content" style="flex: 1;">
-            <img src="images/velaProbStat.gif" alt="Usability Lab" style="width: 100%; height: auto; border-radius: 8px;">
-        </div>
-    </div>
-
-    <div class="content-container">
-        <h3>Competitor Analysis</h3>             
-    </div>
-    <div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
-        <div class="image-content" style="flex: 1; padding-right: 20px;">
-            <img src="images/velaCompAnal.jpg" alt="Competitor analysis" style="width: 100%; height: auto; border-radius: 8px;">
-        </div>
-        <div class="text-content" style="flex: 1;">
-            <p>
+<ul>
+<li>Is visually appealing and contains a well-organized User Interface.</li>
+<li>Makes checking the meteorological conditions a quick, effective, and delightful experience.</li>
+<li>Decreases the possibility of incorrectly interpreting the data on weather conditions, or being prone to not checking them, because of it being complicated and unintuitive.</li>
+</ul>
+</div>
+<div class="image-content" style="flex: 1;">
+<img alt="Usability Lab" class="fade-in" src="images/velaProbStat.gif" style="width: 100%; height: auto; border-radius: 8px;"/>
+</div>
+</div>
+<div class="content-container">
+<h3 class="fade-in">Competitor Analysis</h3>
+</div>
+<div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+<div class="image-content" style="flex: 1; padding-right: 20px;">
+<img alt="Competitor analysis" class="fade-in" src="images/velaCompAnal.jpg" style="width: 100%; height: auto; border-radius: 8px;"/>
+</div>
+<div class="text-content" style="flex: 1;">
+<p class="fade-in">
                 I didn‘t go for the obvious ones: the biggest and most popular, instead I went for two smaller players: <strong style="color: #0058AE;">Surfline</strong> and <strong style="color: #04257A;">Wisuki</strong>. Both are relatively new on the market and both have a task similar to my product's: <strong>new user acquisition</strong> and subsequently <strong>maintaining high engagement and retention rate</strong>. 
             </p>
-            <p>
+<p class="fade-in">
                 The 2 competitors were analyzed by: 
             </p>
-            <ol>
-                <li><strong>Marketing Profile</strong> (the way they present themselves on the market and attract customers)</li>
-                <li><strong>Overall strategy</strong> ( their overall business strategy and position in respect to competitors)</li>
-                <li><strong>UX Analysis</strong> (the features they offer and overall usability) </li>
-                <li><strong>SWOT Analysis</strong></li>
-            </ol>
-        </div>
-    </div>
-    <div class="content-container">
-        <h3>Business requirements</h3>
-            <p>
+<ol class="fade-in">
+<li><strong>Marketing Profile</strong> (the way they present themselves on the market and attract customers)</li>
+<li><strong>Overall strategy</strong> ( their overall business strategy and position in respect to competitors)</li>
+<li><strong>UX Analysis</strong> (the features they offer and overall usability) </li>
+<li><strong>SWOT Analysis</strong></li>
+</ol>
+</div>
+</div>
+<div class="content-container">
+<h3 class="fade-in">Business requirements</h3>
+<p class="fade-in">
                 Now that the goals for measuring the performance of the product itself were set, it was time to set the business goals and objectives. The general target audience and competition were identified, as well as risks and opportunities. Also, all the goals and their KPIs were set in a time frame, to have fixed deadlines.
                 </p>
-        <h4>S.M.A.R.T. Business Objectives:</h4>
-        <table class="hypothesis-objectives-table">
-            <thead>
-                <tr>
-                <th>Goal</th>
-                <th>Measured by:</th>
-                <th>Delivered by:</th>
-                </tr>
-            </thead>
-        <tbody>
-                <tr>
-                <td><strong>Goal 1:</strong> Create a web application that will show the ability of considerable growth of Market Share</td>
-                <td> User testing, and estimating the market size</td>
-                <td>3 months from the project start date</td>
-                        </tr>
-                <tr>
-                    <td><strong>Goal 2:</strong> Gain 1000 new signed-up users within the first month after launching</td>
-                     <td> Count of new users signing up</td>
-                     <td> 1 month after the launch</td>
-                                </tr>
-                <tr>
-                     <td><strong>Goal 3:</strong>Make sure that the app remains relevant on the market and the users are retained 2 months after launching</td>
-                    <td>The ratio between the count of Daily Active Users and Monthly active users in the course of the second month after launching</td>
-                    <td> 2 months after the launch</td>
-                                                </tr>
-            </tbody>
-        </table>    
-    </div>
-
+<h4 class="fade-in">S.M.A.R.T. Business Objectives:</h4>
+<table class="hypothesis-objectives-table fade-in">
+<thead>
+<tr>
+<th>Goal</th>
+<th>Measured by:</th>
+<th>Delivered by:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Goal 1:</strong> Create a web application that will show the ability of considerable growth of Market Share</td>
+<td> User testing, and estimating the market size</td>
+<td>3 months from the project start date</td>
+</tr>
+<tr>
+<td><strong>Goal 2:</strong> Gain 1000 new signed-up users within the first month after launching</td>
+<td> Count of new users signing up</td>
+<td> 1 month after the launch</td>
+</tr>
+<tr>
+<td><strong>Goal 3:</strong>Make sure that the app remains relevant on the market and the users are retained 2 months after launching</td>
+<td>The ratio between the count of Daily Active Users and Monthly active users in the course of the second month after launching</td>
+<td> 2 months after the launch</td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
-
-<section id="observe" class="case-section"> 
-    <div class="content-container">
-            <h2 style="color: rgb(187, 143, 0);">2. Observe</h2>
-        </div>
-        <div class="content-container">
-            <h3>Research Goals</h3>
-            <ul>
-                <li>Better understand our potential users‘ mindset and behavior around the activity of surfing.</li>
-                <li>Discover which are the most important information our potential users need to find out about, and what tasks are they going to want to accomplish using our app.</li>
-                <li>Documenting user opinions ( both aspects that meet their needs and those that present pain points) on existing surfer dedicated weather web and mobile apps.</li>
-                <li>Determine how often and in which context our potential users would use the app.</li>
-                <li>Figure out how to get our potential users into the habit of engaging with our app before heading out to the water.</li>
-            </ul>
-        </div>
-        <div class="content-container">
-            <h3>User Interviews</h3>
-            <p>After establishing our Research Goals, it was time to start getting feedback from actual potential users through user interviews. User interviews were performed on three participants, all surfers with various levels of experience. The gathered insight and data were analyzed and organized using affinity mapping.   
+<section class="case-section" id="observe">
+<div class="content-container">
+<h2 class="fade-in" style="color: rgb(187, 143, 0);">2. Observe</h2>
+</div>
+<div class="content-container">
+<h3 class="fade-in">Research Goals</h3>
+<ul class="fade-in">
+<li>Better understand our potential users‘ mindset and behavior around the activity of surfing.</li>
+<li>Discover which are the most important information our potential users need to find out about, and what tasks are they going to want to accomplish using our app.</li>
+<li>Documenting user opinions ( both aspects that meet their needs and those that present pain points) on existing surfer dedicated weather web and mobile apps.</li>
+<li>Determine how often and in which context our potential users would use the app.</li>
+<li>Figure out how to get our potential users into the habit of engaging with our app before heading out to the water.</li>
+</ul>
+</div>
+<div class="content-container">
+<h3 class="fade-in">User Interviews</h3>
+<p class="fade-in">After establishing our Research Goals, it was time to start getting feedback from actual potential users through user interviews. User interviews were performed on three participants, all surfers with various levels of experience. The gathered insight and data were analyzed and organized using affinity mapping.   
             </p>
-            </div>
-            <div class="intro-details-container">
-                <div class="intro-column">
-                    <img src="images/velaUserInterv1.jpg" alt="User Interview 1" style="width: 70%; height: auto;">
-                    <p>
-                        <strong>Quote:</strong> "To use and recommend an app, this app has to have something no other app has."
+</div>
+<div class="intro-details-container">
+<div class="intro-column">
+<img alt="User Interview 1" class="fade-in" src="images/velaUserInterv1.jpg" style="width: 70%; height: auto;"/>
+<p class="fade-in">
+<strong>Quote:</strong> "To use and recommend an app, this app has to have something no other app has."
                     </p>
-                </div>
-                <div class="intro-column">
-                    <img src="images/velaUserInterv2.jpg" alt="User Interview 1" style="width: 70%; height: auto;">
-                    <p>
-                        <strong>Quote:</strong> "I am always looking at the image gallery of a surfing spot that I never visited, to get a feel of how the spot actually could be in real life."
+</div>
+<div class="intro-column">
+<img alt="User Interview 1" class="fade-in" src="images/velaUserInterv2.jpg" style="width: 70%; height: auto;"/>
+<p class="fade-in">
+<strong>Quote:</strong> "I am always looking at the image gallery of a surfing spot that I never visited, to get a feel of how the spot actually could be in real life."
                     </p>
-                </div>
-                <div class="intro-column">
-                    <img src="images/velaUserInterv3.jpg" alt="User Interview 1" style="width: 70%; height: auto;">
-                    <p>
-                        <strong>Quote:</strong> "Surfers don't share information about less known spots gladly, they want to keep them somewhat secret because they don't want them to be too overcrowded."
+</div>
+<div class="intro-column">
+<img alt="User Interview 1" class="fade-in" src="images/velaUserInterv3.jpg" style="width: 70%; height: auto;"/>
+<p class="fade-in">
+<strong>Quote:</strong> "Surfers don't share information about less known spots gladly, they want to keep them somewhat secret because they don't want them to be too overcrowded."
                     </p>
-                </div>
-                </div>
+</div>
+</div>
+<div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+<div class="image-content" style="flex: 1; padding-right: 20px;">
+<img alt="User Interview Analysis" class="fade-in" src="images/velaUsIntAnal.jpg" style="width: 100%; height: auto; border-radius: 8px;"/>
+</div>
+<div class="text-content" style="flex: 1;">
+<h3 class="fade-in">User Interview Analysis</h3>
+<p class="fade-in">
+                            To better understand and organize all the information gathered during interviews, and analyze it, I made use of <strong>Affinity Mapping</strong>.<br/> This method helped me come up with a list of key insights, that helped me decide upon what aspects and features of the app I am going to concentrate on in my project. 
+                        </p>
+</div>
+</div>
+<div class="content-container">
+<h3 class="fade-in">Key Insights:</h3>
+<ol class="fade-in">
+<li>The surfers living near surfing spots <strong>tend not to go on long-distance surfing trips</strong> as often as surfers that don't have any surfing spots near the place they live.</li>
+<li>The<strong> more experienced surfers</strong> are, the more particular they are about the conditions they are looking for and interested in its details.</li>
+<li>The <strong>weather forecast is not particularly important</strong> to surfers, and <strong>algae reports have absolutely no relevance</strong>.</li>
+<li><strong>Finding new spots</strong> is very important to surfers, regardless of their level of experience, but the more experienced they are, the more secretive they are about unknown and uncrowded surfing spots.</li>
+<li>There are <strong>two types of notifications</strong> relevant to surfers:
+                            <ul>
+<li>Notifications about a very particular combination of conditions depend on the surfer's personal preference and require a high level of detail manipulating notifications settings.</li>
+<li>Warnings and alarms, for example in case of the presence of sharks or jellyfish at the surfing spot.</li>
+</ul></li>
+</ol>
+</div>
 </section>
-
-<section id="flow" class="case-section">
-    <div class="content-container">
-        <h2>The Flow</h2>
-            <p>
-                Here is the flow with all its screens in their order:   
+<section class="case-section" id="POV">
+<div class="content-container">
+<h2 class="fade-in" style="color: rgb(19, 107, 1);">3. POV</h2>
+</div>
+<div class="content-container">
+<h3 class="fade-in">Personas</h3>
+<p class="fade-in">Based on the data gathered through interviews and later analyzed, I set up two personas. They represented two major categories of users that we identified: <strong>beginner surfers</strong> and <strong>expert surfers</strong>. The two personas are 100% based on the interviewed participants in all their aspects relevant to the app. <br/>The personas would help me to recognize what features I should concentrate on, and how the features would best resolve any need or problem a potential user might have. <br/>I referred to them later on throughout the entire product development process.   
             </p>
-            <img src="images/BankIdentFlow.png" alt="Bank Ident" class="illustration" style="width: 100%; height: auto;"> 
-              
-              
-    </div>
+<img alt="Bank Ident" class="illustration fade-in" src="images/velaPersona1.jpg" style="width: 100%; height: auto;"/>
+<img alt="Bank Ident" class="illustration fade-in" src="images/velaPersona2.jpg" style="width: 100%; height: auto;"/>
+</div>
+<div class="content-container">
+<h3 class="fade-in">User Journey Maps</h3>
+<p class="fade-in">With a list of the most relevant potential users' wants and needs, and possible scenarios in which those would occur, I devised 2 user journey maps to see how they would go about performing the tasks that would bring them to achieving their goals.  
+                </p>
+<img alt="vela app user journey" class="illustration fade-in" src="images/velaUserJourn1.jpg" style="width: 100%; height: auto;"/>
+<img alt="vela app user journey" class="illustration fade-in" src="images/velaUserJourn2.jpg" style="width: 100%; height: auto;"/>
+</div>
 </section>
-
-<section id="Hypo-obje" class="case-section">
-     <div class="content-container">
-        <h2>Research Hypotheses & Objectives</h2>
-            <div class="hypothesis-objectives">
-                <table class="hypothesis-objectives-table">
-                    <thead>
-                        <tr>
-                        <th>Hypothesis</th>
-                        <th>Objective</th>
-                        </tr>
-                    </thead>
-                <tbody>
-                        <tr>
-                        <td><strong>Hypothesis 1:</strong> We hypothesized that moving the Bank Selection step to the front would decrease user frustration and reduce cancellation rates by 50%.</td>
-                            <td><strong>Objective 1:</strong> Decrease cancellation rate by 50% for users who have started the flow.</td>
-                            </tr>
-                            <tr>
-                        <td><strong>Hypothesis 2:</strong> Introducing a progress bar would increase the user's sense of control and lead to an improved conversion rate.</td>
-                        <td><strong>Objective 2:</strong> Increase the conversion rate by improving user orientation.</td>
-                        </tr>
-                            <tr>
-                        <td><strong>Hypothesis 3:</strong> Reducing the number of steps would improve conversion rates.</td>
-                        <td><strong>Objective 3:</strong> Increase conversion rate by simplifying the user flow.</td>
-                        </tr>
-                        <tr>
-                        <td><strong>Hypothesis 4:</strong> Fixing UI, UX, and copy issues would minimize user drop-off.</td>
-                        <td><strong>Objective 4:</strong> Increase conversion and partner acceptance rates to 80%.</td>
-                        </tr>
-                    </tbody>
-                </table>
-        </div>
+<section class="case-section" id="ideate">
+<div class="content-container">
+<h2 class="fade-in" style="color: rgb(0, 78, 151);">4. Ideate</h2>
+</div>
+<div class="content-container">
+<h3 class="fade-in">User Flows</h3>
+<p class="fade-in">Now that the potential users were defined and had a solid enough shape, the moment came to work on ideas about how they would interact with the app. Although it was already clear by this time that the app would be relatively complex, with plenty of options available to the users, I wanted the user flows to stay simple and straightforward. This would keep the features that I would work on later in form of prototypes from becoming unnecessarily complicated.   
+            </p>
+<img alt="Bank Ident" class="illustration fade-in" src="images/velaUserFlow1.jpg" style="width: 100%; height: auto;"/>
+<img alt="Bank Ident" class="illustration fade-in" src="images/velaUserFlow2.jpg" style="width: 100%; height: auto;"/>
+</div>
+<div class="content-container">
+<h3 class="fade-in">Sitemap</h3>
+<p class="fade-in">The sitemap that resulted was somewhat complicated. The app itself has a complex information architecture because everything is so intertwined and connected, with child pages from different parents connected between themselves horizontally and between different levels in the hierarchy. But that is the nature of the app, and I wanted to allow the users to quickly access relevant screens that are not necessarily related to each other.   
+                </p>
+<img alt="Bank Ident" class="illustration fade-in" src="images/velaSitemap.jpg" style="width: 100%; height: auto;"/>
+</div>
+<div class="content-container">
+<h3 class="fade-in">Card Sorting</h3>
+</div>
+<div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+<div class="text-content" style="flex: 1; padding-right: 20px;">
+<p class="fade-in">
+                        To see if the sitemap I came up with would be intuitive and intelligible enough with potential users, I performed a <strong>closed card sorting</strong>. It was closed because the main categories were already quite clear and decided upon, and the only thing I wanted to find out was how the users would organize items, and see if their <strong>mental models</strong> would be aligned with the sitemap.  
+                    </p>
+<p class="fade-in">The card sorting was performed online on <strong>OptimalSort</strong> with 12 participants. </p>
+</div>
+<div class="image-content" style="flex: 1;">
+<img alt="card sorting" class="fade-in" src="images/cardSort.jpg" style="width: 100%; height: auto; border-radius: 8px;"/>
+</div>
+</div>
+<div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+<div class="image-content" style="flex: 1; padding-right: 20px;">
+<img alt="Usability Lab" class="fade-in" src="images/placementMatrix.jpg" style="width: 100%; height: auto; border-radius: 8px;"/>
+</div>
+<div class="text-content" style="flex: 1;">
+<p class="fade-in">
+                        The results showed that the sitemap was pretty intuitive, and there were only two discrepancies:
+                    </p>
+<ol>
+<li>"Add Private Spot" card, which 9 out of 12 participants have placed in the "User Profile" category, and in the sitemap, it was under the "Search Spots" category.</li>
+<li>"Member Profile" is in the "Community" category in our sitemap, and all 12 participants have placed it in the "User Profile" category. Here it was obviously a matter of not labeling the card well enough, because from the name of the card it is not clear that it is about members, and not the user him/herself.</li>
+</ol>
+<p class="fade-in">
+                        Consequently the structure of the sitemap remained the same, only the labeling of the features changed, but minimally.
+                    </p>
+</div>
+</div>
 </section>
-        
-
-        <section id="findings" class="case-section">
-            
-            <div class="content-container">
-                <h2>Usability Test Results & Findings</h2>
-            </div>           
-            <div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
-                <div class="text-content" style="flex: 1; padding-right: 20px;">
-                    <h3>Usability Test Notes and Observations</h3>
-                    <p>
-                        The observations, participants' quotes and Errors and Usability issues were all gathered on the Figjam board and clustered directly after the session, together with the assisting person and the product owner in those cases where he was present. We would go through the notes that we made and discuss them.   
+<section class="case-section" id="prototype">
+<div class="content-container">
+<h2 class="fade-in" style="color: rgb(47, 1, 172);">5. Prototype</h2>
+</div>
+<div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+<div class="text-content" style="flex: 1; padding-right: 20px;">
+<h3 class="fade-in">Hand-Drawn Sketches</h3>
+<p class="fade-in">
+                        To start off the prototyping phase of the project, I sketched wireframes for the navigation, both on mobile and desktop view, based on the sitemap. I began with the navigation so that I could start painting the app with the widest possible brush strokes, and have a base off of which I would develop the rest of the wireframes, and continue improving them.   
                     </p>
-                </div>
-                <div class="image-content" style="flex: 1;">
-                    <img src="images/BankIdentUTboard1.png" alt="Usability Lab" style="width: 100%; height: auto; border-radius: 8px;">
-                </div>
-            </div>
-            <div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
-                <div class="image-content" style="flex: 1; padding-right: 20px;">
-                    <img src="images/BankIdentUTboard2.png" alt="Usability Lab" style="width: 100%; height: auto; border-radius: 8px;">
-                </div>
-                <div class="text-content" style="flex: 1;">
-                    <h3>Affinity Map</h3>
-                    <p>
-                        During this discussion sessions, we clustered all the relevant findings into common themes and issues using an Affinity Map. This helped us recognize and group the observations into 5 groups: 
+</div>
+<div class="image-content" style="flex: 1;">
+<img alt="Usability Lab" class="fade-in" src="images/loFiProto1.jpg" style="width: 100%; height: auto; border-radius: 8px;"/>
+</div>
+</div>
+<div class="content-container">
+<p class="fade-in">After that I decided to sketch a couple of main features that I would work on throughout this project:</p>
+<ol>
+<li><h4 class="fade-in">Search surfing spots</h4>
+<p class="fade-in">It was based on the same feature in one of the analyzed competitors but also heavily influenced by google maps, having similar functionality and design patterns. The users can find a surfing spot both by searching on the map and tapping on the pinpoint representing it or by typing its name in the search box.</p></li>
+<li><h4 class="fade-in">Search filter settings</h4>
+<p class="fade-in">Being able to finely tune the filter settings for the search feature is very important, especially because the beginner and expert surfers have different preferences.</p></li>
+<li><h4 class="fade-in">Notifications settings</h4>
+<p class="fade-in">Set up notifications to get both in-app and push notifications about the particular conditions that the users themselves defined.</p></li>
+</ol>
+<img alt="Bank Ident" class="illustration fade-in" src="images/loFiProto2.jpg" style="width: 100%; height: auto;"/>
+</div>
+<div class="content-container">
+<h3 class="fade-in">High Fidelity Wireframes</h3>
+</div>
+<div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+<div class="text-content" style="flex: 1; padding-right: 20px;">
+<h4 class="fade-in">Find and Save Secret Surfing Spots Feature</h4>
+<p class="fade-in">
+                        The animation shows the "Secret Spot" feature. The first iteration of it was based on a similar feature found in one of the analyzed competitors. Tapping on the FAB button opens a pop-up and a pin appears centered on the screen. The users swipe the map underneath, getting dynamically the location underneath the pin on the pop-up. When the users find the right location, pressing the CTA brings them to the Add Secret Spot Screen, where they can give the spot a custom name and add info about it. Clicking on the CTA takes them to the newly created surfing spot screen.   
                     </p>
-                    <ul>
-                        <li>Errors / usability issues</li>
-                        <li>Orientation and feeling of control of the flow process</li>
-                        <li>UX copy and the presented information</li>
-                        <li>Security and trust issues</li>
-                        <li>Inclusiveness</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
-                <div class="text-content" style="flex: 1; padding-right: 20px;">
-                    <h3>Rainbow Spreadsheet</h3>
-                    <p>
-                        These observation points now grouped into common themes, were further put into a rainbow spreadsheet as a visual summmary and way to visually recognize patterns and see the severity of the problem or how common an observation is.   
+</div>
+<div class="image-content fade-in" style="flex: 1;">
+<img alt="High fidelity prototype" class="fade-in" src="images/hiFidProt1.gif" style="width: 100%; height: auto; border-radius: 8px;"/>
+</div>
+</div>
+<div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+<div class="image-content fade-in" style="flex: 1; padding-right: 20px;">
+<img alt="High fidelity prototype" class="fade-in" src="images/hiFidProt2.gif" style="width: 100%; height: auto; border-radius: 8px;"/>
+</div>
+<div class="text-content" style="flex: 1;">
+<h4 class="fade-in">Filter Settings for the Search Feature</h4>
+<p class="fade-in">
+                        To reduce the cognitive load, using the principle of progressive disclosure, the advanced settings are hidden by default. The users can twirl them open if they want to access those. Translated to user personas, the assumption was that this would be valuable to the more experienced surfers, while the beginners would probably only use the basic settings. I would be sure about that only after performing usability testing though. 
                     </p>
-                </div>
-                <div class="image-content" style="flex: 1;">
-                    <img src="images/BankIdentUTboard3.png" alt="Usability Lab" style="width: 100%; height: auto; border-radius: 8px;">
-                </div>
-            </div>
+</div>
+</div>
+<div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+<div class="text-content" style="flex: 1; padding-right: 20px;">
+<h4 class="fade-in">Notifications Settings Screen</h4>
+<p class="fade-in">
+                        Starts with the empty state screen containing starter content in form of an example notification. This way the users know that the list of notifications will appear on this screen and the extended FAB button that takes us to the new notification screen. Similar to the filter settings screen, the parameters here are all closed off as default and can be twirled open to prevent cognitive overload.   
+                    </p>
+</div>
+<div class="image-content fade-in" style="flex: 1;">
+<img alt="Usability Lab" class="fade-in" src="images/hiFidProt3.gif" style="width: 100%; height: auto; border-radius: 8px;"/>
+</div>
+</div>
+</section>
+<section class="case-section" id="test">
+<div class="content-container">
+<h2 class="fade-in" style="color: rgb(111, 0, 145);">6. Test</h2>
+</div>
+<div class="content-container" style="margin-bottom: 0 !important;">
+<h3 class="fade-in">Usability Testing</h3>
+<p class="fade-in">Moderated usability tests were performed on 6 participants remotely. All of the participants were found through my personal network. They were sent the link to the prototype. Zoom was used for communicating with them, webcam so I can see their faces, and they also shared their screen while interacting with the prototype. Sessions lasted on average between 20-3 0min.   
+            </p>
+<img alt="Bank Ident" class="illustration fade-in" src="images/velaUT.jpg" style="width: 100%; height: auto;"/>
+</div>
+<div class="intro-details-container">
+<div class="intro-column">
+<h4 class="fade-in">Usability Test Tasks:</h4>
+<ol>
+<li>Find and save a secret surfing spot.</li>
+<li>Set the filter options so you see only search results inside of a 50km radius and for your level of surfing proficiency (beginner-expert).</li>
+<li>Set the Notifications Options, so you get notified about when the conditions are perfect at the surfing spot of your choice.</li>
+</ol>
+</div>
+<div class="intro-column">
+<h4 class="fade-in">Objectives:</h4>
+<ol>
+<li>Observe how well the users navigate the app, and also if all the CTAs are easy to figure out.</li>
+<li>Determine how easy it is for the users to find surfing spots and see the forecast and all the info about it that is useful to them.</li>
+<li>Determine the same about the aforementioned core features.</li>
+<li>Measure the amount of errors participants commit, and which are the most common ones.</li>
+</ol>
+</div>
+</div>
+<div class="content-container">
+<h3 class="fade-in">Test Results &amp; Analysis</h3>
+</div>
+<div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+<div class="text-content" style="flex: 1; padding-right: 20px;">
+<p class="fade-in">
+                        To analyze the data obtained through user testing I performed another affinity mapping. The results showed me that there were no catastrophic usability errors. A couple of issues were caused by the prototype itself as opposed to the actual app's functionality. To categorize and rank the severity of the errors, I used an adapted version of Jakob Nielsen’s four-step rating scale.   
+                    </p>
+</div>
+<div class="image-content fade-in" style="flex: 1;">
+<img alt="High fidelity prototype" class="fade-in" src="images/velaAffinitMap.jpg" style="width: 100%; height: auto; border-radius: 8px;"/>
+</div>
+</div>
+<div class="content-container">
+<p class="fade-in">The Rainbow Spreadsheet helped me draw out possible solutions from the newly organized data by identifying patterns in participants' input.
+                    <br/>The participants were also coming up with very creative and interesting ideas, for example sharing secret spots with other users, or pinpoints on the map for other kinds of sport or leisure activities, not only surfing spots. Some of these observations I had taken into consideration and would implement later in the following iterations.   
+                </p>
+<img alt="Bank Ident" class="illustration fade-in" src="images/velaRainbow.jpg" style="width: 100%; height: auto;"/>
+</div>
+<div class="content-container">
+<h3 class="fade-in">Test Report and Fixing the Issues</h3>
+<p class="fade-in">Based on the evidence from the usability test and rainbow spreadsheet, I identified <strong>4 top errors and issues</strong> that needed to be addressed in the next iteration of my prototype.</p>
+</div>
+<div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+<div class="text-content" style="flex: 1; padding-right: 20px;">
+<h4 class="fade-in">1. Find Secret Spot Functionality too confusing for the Users</h4>
+<p class="fade-in">
+                        Finding and saving secret surfing spots is one of the core features of the app, but it posed quite a problem for all the participants.  
+                    </p>
+<p class="fade-in">Severity: High</p>
+<p class="fade-in">
+                        Evidence: 4 participants found the feature's functionality and flow to be confusing and not intuitive, one participant was unable to initiate the task alone, couldn't recognize the FAB button, and needed help, 3 participants were unable to perform the task without suggestions and 1 participant expressed the wish to find the location typing in the name or coordinates, and not only by moving the pinpoint on the map.  
+                    </p>
+<p class="fade-in">
+                        Solution: Completely change the functionality of the feature, going for something the users would be more familiar with. Since most users are familiar with Google Maps, we decided to use the mental model already created by it for this feature, and try to replicate the functionality found there. We decided to get rid of the FAB button, and let the user tap and hold to open a modal with info about the location, and the possibility to save the location as a secret spot. It is also possible to come to the same result by typing the name of the location in the search box.  
+                    </p>
+</div>
+<div class="image-content" style="flex: 1;">
+<img alt="usabilit testing report 1" class="thumbnail fade-in" onclick="openModal(this)" src="images/velaUtReport1.jpg" style="width: 100%; height: auto; border-radius: 8px;"/>
+</div>
+</div>
+<div class="modal" id="imageModal">
+<span class="close" onclick="closeModal()">×</span>
+<img class="modal-content fade-in" id="modalImage"/>
+</div>
+<div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+<div class="image-content" style="flex: 1; padding-right: 20px;">
+<img alt="Usability Lab" class="fade-in" src="images/velaUtReport2.jpg" style="width: 100%; height: auto; border-radius: 8px;"/>
+</div>
+<div class="text-content" style="flex: 1;">
+<h4 class="fade-in">2. Save Button missing on the Search Filter Settings</h4>
+<p class="fade-in">
+                        The results showed that the sitemap was pretty intuitive, and there were only two discrepancies:Here everything proved to be working fine, except the fact that the participants were looking for the save button, which I overlooked, thinking that after adjusting the settings the users would just press the back arrow to go back to the map view.
+                    </p>
+<p class="fade-in">
+                        Severity: Medium
+                    </p>
+<p class="fade-in">
+                        Evidence: 5 participants were trying to find the save button after adjusting the filter settings and couldn't find it, and were not sure how to go back to the map view with the settings saved.
+                    </p>
+<p class="fade-in">
+                        Solution: I added the "Save Settings" button at the bottom of the screen.
+                    </p>
+</div>
+</div>
+<div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+<div class="text-content" style="flex: 1; padding-right: 20px;">
+<h4 class="fade-in">3. Adding Surfing Spots to Favorites Functionality Missing</h4>
+<p class="fade-in">
+                            A folder for the favorite spots existed already. Unfortunately, we completely forgot to make it possible for users to add spots to the favorites folder.  
+                        </p>
+<p class="fade-in">Severity: High</p>
+<p class="fade-in">
+                            Evidence: 5 participants were perplexed by this problem and although it was not explicitly part of any of the tasks, they asked what the favorites are, and how to save spots to favorites.  
+                        </p>
+<p class="fade-in">
+                            Solution: After consulting competitors to see how this problem was dealt with, I chose a heart icon next to the spot name to be the best solution for this problem.
+                        </p>
+</div>
+<div class="image-content" style="flex: 1;">
+<img alt="card sorting" class="fade-in" src="images/velaUtReport3.jpg" style="width: 100%; height: auto; border-radius: 8px;"/>
+</div>
+</div>
+<div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+<div class="image-content" style="flex: 1; padding-right: 20px;">
+<img alt="Usability Lab" class="fade-in" src="images/velaUtReport4.jpg" style="width: 100%; height: auto; border-radius: 8px;"/>
+</div>
+<div class="text-content" style="flex: 1;">
+<h4 class="fade-in">4. No Way of Finding Secret Spots Inside the App Once They are Saved</h4>
+<p class="fade-in">
+                            Saving Secret Spots that are only visible to the user that saved them, and get a forecast for them, is another of the core features of the app. Although we elaborated a way to search and save them, there was no way of finding these spots later.
+                        </p>
+<p class="fade-in">
+                            Severity: High
+                        </p>
+<p class="fade-in">
+                            Evidence: 5 participants asked where to find the secret spots screens after they have been saved.
+                        </p>
+<p class="fade-in">
+                            Solution: I found that the folder with a list of secret spots should be inside of the user category, and we placed it in the first tab of the user screen, directly under the surfing history list.
+                        </p>
+</div>
+</div>
+</section>
+<section class="case-section" id="refining the design">
+<div class="content-container">
+<h2 class="fade-in" style="color: rgb(28, 32, 41);">7.Refining the Design</h2>
+</div>
+<div class="content-container">
+<p class="fade-in">After adjusting the prototype a less official and extensive round of usability testing was performed on it, along with peer review, where I got some valuable input from my course's colleagues, and both my tutor and mentor. This resulted in a couple of new iterations with improved usabilty. Parallely, I started polishing the UI, aiming for an overall consistency both in terms of visual design and design patterns. This involved for example devising a grid for the screens and developing a color scheme. The result was a Styleguide for my app.   
+            </p>
+</div>
+<div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+<div class="text-content" style="flex: 1; padding-right: 20px;">
+<h4 class="fade-in">Header Text and CTAs</h4>
+<p class="fade-in">
+                        To analyze the data obtained through user testing I performed another affinity mapping. The results showed me that there were no catastrophic usability errors. A couple of issues were caused by the prototype itself as opposed to the actual app's functionality. To categorize and rank the severity of the errors, I used an adapted version of Jakob Nielsen’s four-step rating scale.   
+                    </p>
+</div>
+<div class="image-content fade-in" style="flex: 1;">
+<img alt="High fidelity prototype" class="fade-in" src="images/velaRefining1.jpg" style="width: 100%; height: auto; border-radius: 8px;"/>
+</div>
+</div>
+<div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+<div class="image-content" style="flex: 1; padding-right: 20px;">
+<img alt="Usability Lab" class="fade-in" src="images/velaRefining2.jpg" style="width: 100%; height: auto; border-radius: 8px;"/>
+</div>
+<div class="text-content" style="flex: 1;">
+<h4 class="fade-in">Grid</h4>
+<p class="fade-in">
+                        On the example of the Surfing Spot screen, we can see how introducing a grid to our screens has improved the organization of the content and elements of the screen layouts. The grid helped us to align all the entries to the left, touching the margin. The heart icon that serves to save the spot to favorites has been centered inside the fifth columns, and the arrow back is also aligned left to the margin. the tabs are maybe not obviously aligned to the grid, but the grid helped us find the middle of the screen, to find where the tab line is ending. We also aligned the spot's name to the left on the second column.
+                    </p>
+</div>
+</div>
+<div class="content-container">
+<h4 class="fade-in">Color Scheme</h4>
+<p class="fade-in">The color scheme also through several iterations until I came to the final solution. I was very aware of the importance and various implication of the color choices, and of the fact that they not only visually represent the app's identity, but are also very efficient from the point of view of the emotional and subconscious effect they have ( visceral level).   
+                </p>
+<img alt="Bank Ident" class="illustration fade-in" src="images/velaRefining3.jpg" style="width: 100%; height: auto;"/>
+</div>
+</section>
+<section class="case-section" id="conclusion">
+<div class="content-container">
+<h2 class="fade-in">Conclusion</h2>
+<p class="fade-in">Plans for the future would be doing a couple of more iterations and subsequent Usability tests, and only go into the development phase when I am sure that any major technical debt would be avoided. This might last for another 2 months. I also have to be careful not to allow for feature creep, and not go too wild trying to improve the product, so both time limits and technical limits of what is possible are met.</p>
+</div>
+</section>
+<img alt="Vela App" class="cover-image fade-in" src="images/velaScreens.png"/>
+<footer>
+<p class="fade-in">© 2024 Filip Zigo | All Rights Reserved</p>
+</footer>
+<script>
 
-            <div class="content-container">
-                <h3>Key Findings Summmary</h3>
-                <div class="findings-list">
-                    <p>Here are the key findings from the usability test, which show that most of our assumptions have been confirmed:</p>
-                    <ul>
-                        <li><h4><span class="tooltip" data-tooltip="Moving the Bank Selection step to the front of the user flow would decrease user frustration and reduce cancellation rate by 50%.">Hypothesis 1</span> <span>&#9989;</span></h4>
-                            <p>4 out of 5 participants had an account with a bank that was not supported by Bank Ident (because they performed the task in test environment
-                                with testbank they could continue with the flow, but in real life they would be unable to proceed on the Bank-selection Screen) and all 5
-                                expressed that they would prefer to have that screen at the begining so they don’t have to go through all the previous steps, invest so much
-                                time and effort into filling in input fields and reading about the steps ahead (Ident-Form & PIS-Intro screens) and then still be unable to finish
-                                the flow.</p></li>
-                        <li><h4><span class="tooltip" data-tooltip="Introducing a progress bar would increase the user's sense of control and lead to an improved conversion rate.">Hypothesis 2</span> <span>&#9989;</span></h4>
-                            <p>3 out of 5 participants Expressed a wish for some kind of progress indicator or progress bar, to be able to anticipate how many steps are
-                                ahead, to make them feel more comfortable and give them a feeling of control over the process, and make it more transparent. The remaining
-                                2 participants were on one side an extremely tech savvy product manager, that very quickly finished the task, and had some background
-                                knowledge of the process, and therefore didn’t feel the need for a progress bar, and on the other a 60+ retired teacher, that wasn’t interested
-                                in the process, and how many steps it consists off, but her initial trust that she put into the process was insurance enough that she could trust
-                                it, and not worry how many steps it takes.</p></li>
-                        <li><h4><span class="tooltip" data-tooltip="Reducing the number of steps would improve conversion rates.">Hypothesis 3</span><span>&#10067;</span></h4>
-                            <p>3 out of 5 participants didn’t read the text on the PIS-intro screen, and found the screen to be unnecessary, but the other 2 found it to be
-                                helpful. All the participants found that all the steps of the flow were necessary, and as the result, judging from the qualitative data and the
-                                perception of the test participants, this hypthesis has not been completely confirmed. What the UT showed is that the sense of orientation and
-                                control of the process i.e. knowing how many steps are left and having transparent information on what happens at each step is far more
-                                important for conversion.</p></li>
-                                <li>
-                                    <h4><span class="tooltip" data-tooltip="Fixing UI, UX, and copy issues would minimize user drop-off.">Hypothesis 4</span> <span>&#9989;</span></h4>
-                                    <p>A number of usability, UI, and UX issues were identified, including:</p>
-                                    <ol>
-                                        <li>Input Field Usability:
-                                            <ul>
-                                                <li>Date of Birth input field on the Ident-Form screen, and bank selection input on the Bank-Selection screen, were noted as problematic.</li>
-                                                <li>On smaller screens, if users fail to check the title radio button or make an error, the input field may not be visible, causing confusion when the "Next" button doesn’t respond.</li>
-                                            </ul>
-                                        </li>
-                                        <li>Button Placement:
-                                            <ul>
-                                                <li>The "Next" and "Back" buttons are too close and vertically aligned, leading to frequent misclicks. Three out of five participants clicked "Back" instead of "Next."</li>
-                                            </ul>
-                                        </li>
-                                        <li>Session Timeout:
-                                            <ul>
-                                                <li>Sessions timed out for four out of five participants, likely due to lengthy interaction with each screen. Adding a timeout warning or countdown could mitigate this issue.</li>
-                                            </ul>
-                                        </li>
-                                        <li>Confirmation Screen Data Layout:
-                                            <ul>
-                                                <li>Participants found separate screens for personal data on the QES-Confirm-Data screen inconvenient. Three out of five preferred viewing all data on a single screen for easier confirmation.</li>
-                                            </ul>
-                                        </li>
-                                        <li>Download Options on QES-Confirmation Screen:
-                                            <ul>
-                                                <li>Tech-savvy users suggested the document should be automatically saved, preferably emailed rather than downloaded to a local device.</li>
-                                                <li>Less tech-savvy users overlooked the toggle option, finding it irrelevant whether they received the document locally or not.</li>
-                                            </ul>
-                                        </li>
-                                        <li>UX Copy:
-                                            <ul>
-                                                <li>Some screens (e.g., PIS-Intro, QES-Confirm-Data) contained confusing or verbose language, with cryptic information and typographical errors, diminishing clarity.</li>
-                                            </ul>
-                                        </li>
-                                    </ol>
-                                </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="conclusion" class="case-section">
-            <div class="content-container">
-                <h2>Conclusion</h2>
-                <p>The usability test confirmed that several changes could significantly improve the Bank Ident experience. Participants' feedback has highlighted the need for improved UI elements, clearer navigation, and an overall streamlined user experience.</p>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Bank-Ident Usability Testing | All Rights Reserved</p>
-    </footer>
 
 
-    <script>
         let lastScrollTop = 0;
         const header = document.getElementById('sticky-header');
         
@@ -473,7 +670,12 @@
             }
             lastScrollTop = scrollTop;
         });
+
+
+
+
+
     </script>
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
