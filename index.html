@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
+<body style ="background-color: rgb(250, 252, 253) !important;">
     <header id="sticky-header">
         <div class="container">
             <!-- Moved the brand div above navigation for mobile view -->
@@ -141,6 +141,17 @@
             }
             lastScrollTop = scrollTop;
         });
+
+// Initialize ScrollReveal
+ScrollReveal().reveal('.fade-in', {
+    origin: 'bottom',
+    distance: '20px',
+    duration: 600,
+    delay: 200,
+    opacity: 0,
+    easing: 'ease-out'
+});
+
     </script>
     <script src="script.js"></script>
 </body>

@@ -1,3 +1,21 @@
+// Initialize ScrollReveal
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("ScrollReveal initialized");
+    
+    ScrollReveal().reveal('.fade-in', {
+        origin: 'bottom',
+        distance: '20px',
+        duration: 800,
+        delay: 350,
+        opacity: 0,
+        easing: 'ease-out'
+    });
+});
+
+
+
+
+
 // Target the blur circle
 const blurCircle = document.querySelector('.blur-circle');
 
@@ -68,6 +86,9 @@ if (isMobileDevice()) {
         blurCircle.style.opacity = 1;
     });
 }
+
+
+
 
 
 
