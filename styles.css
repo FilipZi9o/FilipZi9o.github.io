@@ -199,6 +199,7 @@ section {
     padding: 50px 0;
     background-color: rgb(250, 252, 253); /* Light grey background */
     text-align: center;
+    height: 95vh;
 }
 
 #work h2 {
@@ -209,7 +210,7 @@ section {
     display: flex;
     flex-wrap: wrap; /* Allows wrapping of cards */
     justify-content: center; /* Centers the cards */
-    gap: 20px; /* Space between cards */
+    gap: 60px 40px; /* Space between cards */
 }
 
 .work-card {
@@ -231,7 +232,7 @@ section {
 }
 
 .card-image {
-    height: 200px; /* Fixed height for images */
+    height: 250px; /* Fixed height for images */
     background-size: cover;
     background-position: center;
 }
@@ -259,8 +260,13 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    #work {
+        padding: 30px 0; /* Reduce padding if needed */
+        height: auto;
+    }
     .work-card {
-        width: calc(50% - 20px); /* 2 cards per row */
+        width: calc(50% - 25px); /* 2 cards per row */
+        margin-bottom: 20px;
     }
 }
 

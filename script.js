@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ScrollReveal().reveal('.fade-in', {
         origin: 'bottom',
         distance: '20px',
-        duration: 800,
+        duration: 600,
         delay: 350,
         opacity: 0,
         easing: 'ease-out'
