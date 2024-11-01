@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Optimizing Muesli GmbH's Lead Time</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://unpkg.com/scrollreveal"></script>
+<!-- 
+
+    <script>
+        // Hash function to securely verify password input
+        async function hashPassword(password) {
+            const msgUint8 = new TextEncoder().encode(password); // Encode as UTF-8
+            const hashBuffer = await crypto.subtle.digest("SHA-256", msgUint8); // Hash the password
+            const hashArray = Array.from(new Uint8Array(hashBuffer)); // Convert buffer to byte array
+            return hashArray.map(b => b.toString(16).padStart(2, '0')).join(''); // Convert bytes to hex string
+        }
+    
+        // Secure password check using hashed password
+        (async () => {
+            const correctHash = "7ac509b68034d82ad344dc39c397ccc71bda7706efcb21eb76571eb01f4a8fdb"; // Hashed version of "mypassword"
+            const userPassword = prompt("Please enter the password to access this page:");
+            const userHash = await hashPassword(userPassword);
+            
+            if (userHash !== correctHash) {
+                alert("Incorrect password. Redirecting to the homepage.");
+                window.location.href = "index.html"; // Redirect to home page if password is incorrect
+            }
+        })();
+    </script>
+
+-->
+</head>
+<body id="MuesliPage">
+<header id="sticky-header">
+<div class="container">
+<div class="brand">
+<h1>Filip Žigo</h1>
+</div>
+<nav>
+<ul>
+<ul>
+<li><a href="index.html#home">Home</a></li>
+<li><a href="index.html#work">Work</a></li>
+<li><a href="index.html#about">About</a></li>
+</ul>
+</ul>
+</nav>
+</div>
+</header>
+<img alt="Black Gold Rush" class="cover-image fade-in" src="images/Muesli.png"/>
+<main>
+<section class="case-section" id="introduction">
+<h1 class="case-header fade-in">Optimizing Muesli GmbH's Lead Time</h1>
+<div class="content-container">
+<h2 class="fade-in">Introduction</h2>
+<p class="fade-in">This was my inferential statistics project for the data analytics bootcamp I did with Spiced Accademy. It consists of an Exploratory Data Analysis of the end-to-end delivery process (Lead Time) of a ficticious Muesli delivery company, and aplying some inferential statiscs as well as machine learning methods to try and predict the delivery times in future, based on present data.</p>
+</div>
+<div class="intro-details-container fade-in">
+<div class="intro-column">
+<h3 class="fade-in">Roles</h3>
+<ul class="fade-in">
+<li>Data cleaning & Wrangling</li>
+<li>Data Analytics</li>
+<li>Data Visualisation</li>
+</ul>
+</div>
+<div class="intro-column">
+<h3 class="fade-in">Tools</h3>
+<ul class="fade-in">
+<li>Python / Pandas</li>
+<li>scikit-learn | Machine Learning</li>
+<li> Seaborn / Matplotlib | Data Visualisation</li>
+</ul>
+</div>
+<div class="intro-column duration">
+<h3 class="fade-in">Project Duration</h3>
+<ul class="fade-in">
+<li>Juli 2024</li>
+<li>2 days</li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+<section class="case-section" id="streamlit-app">
+
+
+    <div class="content-container">
+        <h2 class="fade-in">Project Details</h2>
+        <p class="fade-in">The goal of this project was to analyze the electronic music genre vinyl records market on <a href="https://www.discogs.com/" target="_blank">Discogs</a>, an online music database and marketplace. Going from the bird perspective of exploring the general trends in the music industry over the last 4 decades, especially the trends of sales of different formats over the years, and then zooming into the specifically the 1990's, widely regarded as the golden age of electronic music.</p> 
+        <p class="fade-in">I analyzed statistical data from discogs to try and recognize trends, and relationships between different metrics and the prices of the records. 4 Datasets, found on <a href="https://www.statista.com/" target="_blank">statista.com</a> and <a href="https://www.kaggle.com/" target="_blank">kaggle.com</a> were used in this project.</p>
+        <p class="fade-in">Please feel free to check out:</p>
+        <ul>
+            <li class="fade-in">
+                The actual deployed 
+                <a href="https://filipzi9o-black-gold-rush-streamlitapp-intro-sgrkrk.streamlit.app" target="_blank" class="custom-link">
+                    ✨ Streamlit app ✨<span class="arrow"> ➜</span>
+                </a>
+            </li>
+            <li class="fade-in">
+                <a href="https://github.com/FilipZi9o/black-gold-rush-streamlitapp" target="_blank" class="custom-link">
+                    🤓The project on GitHub🤓<span class="arrow"> ➜</span>
+                </a>, if you want to nerd out, or check my data cleaning & wrangling process with pandas.
+            </li>
+
+        </ul>
+
+</div>
+
+<div class="content-container">
+    <h3 class="fade-in">Future steps</h3>
+    <p class="fade-in">The goal is to evolve the current Streamlit app from reading data from CSV files to directly integrating with the Discogs API, enabling dynamic data extraction and real-time analysis. This upgrade will allow the app to perform statistical modeling and machine learning predictions on record prices, focusing on identifying trends in the electronic music genre. Ultimately, the app will provide users with valuable insights into potential investment opportunities within the vinyl record market.</p>
+</div>               
+</section>
+
+
+
+
+<footer>
+<p>© 2024 Filip Zigo | All Rights Reserved</p>
+</footer>
+<script>
+        let lastScrollTop = 0;
+        const header = document.getElementById('sticky-header');
+        
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Change header background based on scroll position
+            if (scrollTop === 0) {
+                // At the top of the page, make the background transparent
+                header.classList.add('transparent');
+            } else {
+                // Scroll down, change to white background
+                header.classList.remove('transparent');
+            }
+
+            // Hide header when scrolling down, show when scrolling up
+            if (scrollTop > lastScrollTop) {
+                // Scroll down: hide the header completely
+                header.style.top = '-100px';
+            } else {
+                // Scroll up: show the header
+                header.style.top = '0';
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
+<script src="script.js"></script>
+</body>
+</html>
