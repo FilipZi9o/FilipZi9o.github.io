@@ -580,3 +580,34 @@ footer {
     opacity: 1;
     visibility: visible;
 }
+
+
+
+/* for the custom links on black gold rush; */
+.custom-link {
+    text-decoration: none; /* Remove the default underline */
+    font-weight: bold;     /* Make the text bold */
+    color: #800080;           /* Set the color, change as needed */
+    position: relative;    /* Position relative for arrow animation */
+}
+
+.custom-link .arrow {
+    display: inline-block;     /* Make the arrow behave as an inline-block */
+    transition: transform 0.5s ease-out; /* Ease-out for smooth movement */
+    position: relative;
+    animation: arrow-move 1.5s ease-out infinite; /* Infinite looping animation */
+    color: #800080 ;
+}
+
+@keyframes arrow-move {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(4px); /* Moves slightly to the right */
+    }
+}
+
+.custom-link:hover .arrow {
+    transform: translateX(6px); /* Slightly bigger movement on hover */
+}
