@@ -57,7 +57,7 @@
 <h1 class="case-header fade-in">Optimizing Muesli GmbH's Lead Time</h1>
 <div class="content-container">
 <h2 class="fade-in">Introduction</h2>
-<p class="fade-in">This was my inferential statistics project for the data analytics bootcamp I did with Spiced Accademy. It consists of an Exploratory Data Analysis of the end-to-end delivery process (Lead Time) of a ficticious Muesli delivery company, and aplying some inferential statiscs as well as machine learning methods to try and predict the delivery times in future, based on present data.</p>
+<p class="fade-in">This was my inferential statistics project for the data analytics bootcamp I did with Spiced Academy. It consists of an Exploratory Data Analysis of the end-to-end delivery process (Lead Time) of a ficticious Muesli delivery company, and aplying some inferential statiscs as well as machine learning methods to try and predict the delivery times in future, based on historical data.</p>
 </div>
 <div class="intro-details-container fade-in">
 <div class="intro-column">
@@ -86,39 +86,74 @@
 </div>
 </section>
 </main>
-<section class="case-section" id="streamlit-app">
+<section class="case-section" id="muesliDetails">
 
 
     <div class="content-container">
         <h2 class="fade-in">Project Details</h2>
-        <p class="fade-in">The goal of this project was to analyze the electronic music genre vinyl records market on <a href="https://www.discogs.com/" target="_blank">Discogs</a>, an online music database and marketplace. Going from the bird perspective of exploring the general trends in the music industry over the last 4 decades, especially the trends of sales of different formats over the years, and then zooming into the specifically the 1990's, widely regarded as the golden age of electronic music.</p> 
-        <p class="fade-in">I analyzed statistical data from discogs to try and recognize trends, and relationships between different metrics and the prices of the records. 4 Datasets, found on <a href="https://www.statista.com/" target="_blank">statista.com</a> and <a href="https://www.kaggle.com/" target="_blank">kaggle.com</a> were used in this project.</p>
-        <p class="fade-in">Please feel free to check out:</p>
-        <ul>
-            <li class="fade-in">
-                The actual deployed 
-                <a href="https://filipzi9o-black-gold-rush-streamlitapp-intro-sgrkrk.streamlit.app" target="_blank" class="custom-link">
-                    ✨ Streamlit app ✨<span class="arrow"> ➜</span>
-                </a>
-            </li>
-            <li class="fade-in">
-                <a href="https://github.com/FilipZi9o/black-gold-rush-streamlitapp" target="_blank" class="custom-link">
-                    🤓The project on GitHub🤓<span class="arrow"> ➜</span>
-                </a>, if you want to nerd out, or check my data cleaning & wrangling process with pandas.
-            </li>
+        <p class="fade-in">The goal of this project was to understand and extract the information from customer briefing, and based on it, to clean, prepare and combine multiple data sources, to than perform exploratory data analysis on. Expanded on the descriptive data analysis, I performed inferential statistics methods: an <strong>A/B test</strong> to check the Lead Time for each processing type and if there is some significant difference, and created a simple <strong>Linear regression model</strong> on just one factor which is the shipping mode to predict the Lead Times.  </p> 
+</div>             
+</section>
 
-        </ul>
-
+<section class="case-section" id="muesliProcessFlow">
+ <div class="content-container">
+        <h2 class="fade-in">Order Process and Flow Chart</h2>
+        <p class="fade-in">Based on the customer's briefing, I created a flow chart of the end-to-end delivery process (lead time), and tried to identify the relevant columns and datapoints from the datasets available.</p> 
 </div>
-
+<img alt="Muesli delivery" class="illustration fade-in" src="images/muesli1.png" style="width: 100%; height: auto; padding-top: 0 !important;"/>
 <div class="content-container">
-    <h3 class="fade-in">Future steps</h3>
-    <p class="fade-in">The goal is to evolve the current Streamlit app from reading data from CSV files to directly integrating with the Discogs API, enabling dynamic data extraction and real-time analysis. This upgrade will allow the app to perform statistical modeling and machine learning predictions on record prices, focusing on identifying trends in the electronic music genre. Ultimately, the app will provide users with valuable insights into potential investment opportunities within the vinyl record market.</p>
+    <p class="fade-in">After the delivery process was plotted out in the flow, i started identifying the most important variables inside of the dataset, to be able to start with the process of data cleaning, wrangling and combining of the multiple datasets on the relevant columns.</p>
+    <img alt="Muesli delivery" class="illustration fade-in" src="images/Muesli2.png" style="width: 100%; height: auto; padding-top: 0 !important;"/>   
 </div>               
 </section>
 
+<section class="case-section" id="muesliDataWrangling">
+    <div class="content-container">
+           <h2 class="fade-in">Data Cleaning & Wrangling</h2>
+           <p class="fade-in">Following are the images of the jupyter notebook of the data cleaning and wrangling process, to illustrate how and why I prepared the datasets and then merged them:</p> 
+   </div>
+   <div class="content-container">
+    <img alt="Muesli delivery" class="illustration fade-in" src="images/muesli3.png" style="width: 100%; height: auto; padding-top: 0 !important;"/>
+       <img alt="Muesli delivery" class="illustration fade-in" src="images/Muesli5.png" style="width: 100%; height: auto; padding-top: 0 !important;"/>
+       <img alt="Muesli delivery" class="illustration fade-in" src="images/Muesli6.png" style="width: 100%; height: auto; padding-top: 0 !important;"/>    
+   </div> 
+   <div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+    <div class="image-content" style="flex: 1; padding-right: 20px;">
+    <img alt="Usability Lab" class="fade-in" src="images/Muesli7.png" style="width: 100%; height: auto; border-radius: 8px;"/>
+    </div>
+    <div class="image-content" style="flex: 1; padding-right: 20px;"> 
+        </div>
 
+    </div>              
+   </section>
 
+   <section class="case-section" id="Data Visualisation">
+    <div class="content-container">
+           <h2 class="fade-in">Data Visualisation</h2>
+           <p class="fade-in">Comparing the 2 ship modes:</p> 
+   </div>
+
+   <div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+    <div class="image-content" style="flex: 1; padding-right: 20px;">
+    <img alt="Usability Lab" class="fade-in" src="images/Muesli8.png" style="width: 100%; height: auto; border-radius: 8px;"/>
+    </div>
+    <div class="image-content" style="flex: 1; padding-right: 20px;">
+        <img alt="Usability Lab" class="fade-in" src="images/Muesli9.png" style="width: 100%; height: auto; border-radius: 8px;"/>
+        </div>
+
+    </div>
+
+    <div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+        <div class="image-content" style="flex: 1; padding-right: 20px;">
+        <img alt="Usability Lab" class="fade-in" src="images/Muesli10.png" style="width: 100%; height: auto; border-radius: 8px;"/>
+        </div>
+        <div class="image-content" style="flex: 1; padding-right: 20px;">
+            <img alt="Usability Lab" class="fade-in" src="images/Muesli11.png" style="width: 100%; height: auto; border-radius: 8px;"/>
+            </div>
+    
+        </div>
+
+   </section>
 
 <footer>
 <p>© 2024 Filip Zigo | All Rights Reserved</p>
