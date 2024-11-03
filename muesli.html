@@ -155,6 +155,94 @@
 
    </section>
 
+   <section class="case-section" id="Inferential Statistics">
+    <div class="content-container">
+           <h2 class="fade-in">Inferential Statistics</h2> 
+   </div>
+
+
+
+<div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+    <div class="text-content fade-in" style="flex: 1; padding-right: 20px;">
+        <h3 class="fade-in">Gathering Samples and Bootstrapping</h3>
+        <p class="fade-in">The two shipmodes were bootstrapped, meaning we increased the number of samples to make our experiment statistically significant.<br>Based of the size of the population, I decided that I needed at least 1000 datapoints to work with.
+            </p> 
+    </div>
+    <div class="image-content" style="flex: 1;">
+    <img alt="bootstrapping" class="fade-in" src="images/bootstraping illu.png" style="width: 100%; height: auto; border-radius: 8px;"/>
+    </div>
+    </div>
+
+   <div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+    <div class="image-content" style="flex: 1; padding-right: 20px;">
+    <img alt="Usability Lab" class="fade-in" src="images/muesli_bootstrapping_standard.png" style="width: 100%; height: auto; border-radius: 8px;"/>
+    </div>
+    <div class="image-content" style="flex: 1; padding-right: 20px;">
+        <img alt="Usability Lab" class="fade-in" src="images/muesli_bootstrapping_express.png" style="width: 100%; height: auto; border-radius: 8px;"/>
+        </div>
+
+    </div>
+<div class="content-container">
+    <img alt="bootstrapped histogram" class="illustration fade-in" src="images/muesli_bootstrapped histogram.png" style="width: 100%; height: auto; padding-top: 0 !important;"/> 
+</div>
+<div class="content-container">
+    <h3 class="fade-in">A/B Testing</h3>
+
+<p class="fade-in" style="font-style: italic; font-family: Georgia, serif; background-color: #f0f0f0; padding: 5px; border-radius: 4px;">
+        <strong>Hypothesis 0:</strong> There is no difference between standard and express processing<br>   
+        <strong>Hypothesis 1:</strong> There is a difference between standard and express processing
+</p>
+<img alt="bootstrapped histogram" class="illustration fade-in" src="images/muesli_ibootstrapping_abtest.png" style="width: 100%; height: auto; padding-top: 0 !important;"/>
+<p class="fade-in">
+    Hypothesis 1 has been confirmed:
+high t-value (556), pvalue (= 0) means difference is statistically relevant, high degrees of freedom (1440) means the sample size is large enough.
+   
+</p>
+</div>
+
+<div class="content-container">
+    <h3 class="fade-in">Linear Regression</h3>
+</div>
+
+<div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+    <div class="text-content fade-in" style="flex: 1; padding-right: 20px;">
+        <p class="fade-in">We predicted future Lead Times based on historical data with <strong>Linear Regression</strong>.
+            </p>
+        <ul>
+            <li><strong>Step 1:</strong> convert our variable to numerical data. New column replacing standard proceeding with 0; and express with 1.</li>
+            <li><strong>Step 2:</strong> defining the independent and dependent variables (X and y respectively):
+                <ul><li>X = shipment mode</li>
+                    <li>Y = lead timea</li>
+                </ul>
+                </li>
+            <li><strong>Step 3:</strong> run the linear regression model and disclose the summary results.</li>
+        </ul> 
+    </div>
+    <div class="image-content" style="flex: 1;">
+    <img alt="bootstrapping" class="fade-in" src="images/Muesli_linearRegression.png" style="width: 100%; height: auto; border-radius: 8px;"/>
+    </div>
+    </div>
+
+    <div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+        <div class="image-content" style="flex: 1;">
+            <img alt="bootstrapping" class="fade-in" src="images/muesli_bootstrapping_linear4.png" style="width: 100%; height: auto; border-radius: 8px;"/>
+            </div>
+        <div class="text-content fade-in" style="flex: 1; padding-right: 20px;">
+            <p class="fade-in">The predicted Linear Regression model has a very low R^2 which means that:
+                </p>
+            <ul>
+                <li>Shipping mode only describes around <strong>50%</strong> of the Lead Times.</li>
+                <li>We need to incorporate extra variables that more accurately explain the lead times.
+                    </li>
+                <li>This will yield a more precise Lead Time prediction.</li>
+            </ul> 
+        </div>
+
+        </div>
+
+
+   </section>
+
 <footer>
 <p>© 2024 Filip Zigo | All Rights Reserved</p>
 </footer>
