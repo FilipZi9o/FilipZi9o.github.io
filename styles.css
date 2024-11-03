@@ -279,7 +279,7 @@ section {
 
 #about {
     height: 100vh;
-    background-color: #90ee90; /* Light green */
+    padding-top: 130px !important;
 }
 
 /* Footer styles */

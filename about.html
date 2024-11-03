@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filip Zigo - Product Designer / UX researcher</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body style ="background-color: rgb(250, 252, 253) !important;">
+    <header id="sticky-header">
+        <div class="container">
+            <!-- Moved the brand div above navigation for mobile view -->
+            <div class="brand">
+                <h1>Filip Žigo</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#work">Work</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+  
+        <section id="about">
+ 
+            <div class="content-container">
+                <h1 class="fade-in" style="text-align: center; font-size: 40px;">About me</h1>
+                </div>
+                <div class="content-container flex-container" style="display: flex; align-items: flex-start; flex-wrap: wrap;">
+                    <div class="text-content fade-in" style="flex: 1; padding-right: 20px;">
+                        <p class="fade-in">In my free time, you will find me in a record shop trying to find that hidden gem⏺️, or on the mat, as a Brazilian Jiu-Jitsu white belt trying hard not to get chocked🥋.
+                            </p> 
+                    </div>
+                    <div class="image-content" style="flex: 1;">
+                    <img alt="bootstrapping" class="fade-in" src="images/aboutImage.jpg" style="width: 100%; height: auto; border-radius: 8px;"/>
+                    </div>
+                    </div>
+
+        </section>
+        
+ <!--       
+        <section id="about">
+            <h2>About Section</h2>
+        </section>-->
+
+
+    <footer>
+        <p>&copy; 2024 Filip Zigo | All Rights Reserved</p>
+    </footer>
+
+    <!-- JavaScript for sticky nav, scroll effect, and background change -->
+    <script>
+        let lastScrollTop = 0;
+        const header = document.getElementById('sticky-header');
+        
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Change header background based on scroll position
+            if (scrollTop === 0) {
+                // At the top of the page, make the background transparent
+                header.classList.add('transparent');
+            } else {
+                // Scroll down, change to white background
+                header.classList.remove('transparent');
+            }
+
+            // Hide header when scrolling down, show when scrolling up
+            if (scrollTop > lastScrollTop) {
+                // Scroll down: hide the header completely
+                header.style.top = '-100px';
+            } else {
+                // Scroll up: show the header
+                header.style.top = '0';
+            }
+            lastScrollTop = scrollTop;
+        });
+
+// Initialize ScrollReveal
+ScrollReveal().reveal('.fade-in', {
+    origin: 'bottom',
+    distance: '20px',
+    duration: 600,
+    delay: 200,
+    opacity: 0,
+    easing: 'ease-out'
+});
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html> 
